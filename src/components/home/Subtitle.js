@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect, useCallback } from 'react'
 import { useTransition, animated } from 'react-spring'
 
-export default function Trail() {
+export default function Subtitle() {
   const ref = useRef([])
   const [items, set] = useState([])
   const transitions = useTransition(items, null, {

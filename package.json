@@ -2,11 +2,15 @@
   "name": "aymeric-basset-portfolio",
   "description": "Portfolio de Aymeric Basset.",
   "author": "Aymeric Basset <aymeric.basset@gmail.com>",
-  "contributors": ["Aymeric Basset <aymeric.basset@gmail.com>", "calag4n <console.logan@gmail.com"],
+  "contributors": [
+    "Aymeric Basset <aymeric.basset@gmail.com>",
+    "calag4n <console.logan@gmail.com"
+  ],
   "version": "0.2.0",
   "private": false,
-  "keywords": ["portfolio"],
-  
+  "keywords": [
+    "portfolio"
+  ],
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
@@ -17,6 +21,7 @@
     "react-scripts": "4.0.0",
     "react-spring": "^8.0.27",
     "react-vertical-timeline-component": "^3.3.1",
+    "styled-components": "^5.2.1",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
@@ -45,7 +50,7 @@
     ]
   },
   "bugs": "https://github.com/AymericBasset/portfolio_dev/issues",
-  "homepage": "// TODO get domain name",
+  "homepage": "https://TODO-get-domain.name",
   "license": "MIT",
   "repository": {
     "type": "git",
