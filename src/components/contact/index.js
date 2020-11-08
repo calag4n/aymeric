@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ContainedButtons() {
+const ContainedButtons = () => {
   const classes = useStyles();
 
   return (
@@ -22,3 +22,5 @@ export default function ContainedButtons() {
     </div>
   );
 }
+
+export default ContainedButtons

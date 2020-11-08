@@ -1,7 +1,7 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade'
 
-export default function About (){
+const About = () => {
   return (
     <div style={{color : "white", fontSize : "large", textAlign:"center" }}>
         <h1>About me</h1>
@@ -12,3 +12,5 @@ export default function About (){
     </div>
   )
 }
+
+export default About

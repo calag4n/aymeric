@@ -1,16 +1,17 @@
 import React from 'react';
-import ensta from './ensta.png'
-import tel from './telecom.png'
-import ilb from './ilb.png'
-import kcl from './kcl.png'
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
 import SchoolIcon from '@material-ui/icons/School';
 import WorkIcon from '@material-ui/icons/Work';
+import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+
+import ensta from '../../images/experience/ensta.png'
+import tel from '../../images/experience/telecom.png'
+import ilb from '../../images/experience/ilb.png'
+import kcl from '../../images/experience/kcl.png'
+
+import 'react-vertical-timeline-component/style.min.css';
 
 
-
-export default function experience() {
+const Experience = () => {
 
   return (
     
@@ -100,5 +101,4 @@ export default function experience() {
   )
 }
 
-
-
+export default Experience

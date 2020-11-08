@@ -14,7 +14,8 @@ export const theme = {
 	colors: {
 		bg: '#253237',
 		primary: '#f50057',
-		secondary: '',
+		secondary: 'rgb(33, 150, 243)',
+		white: '#fff',
 	},
 }
 
@@ -22,11 +23,13 @@ export const useAppTheme = () => useContext(ThemeContext)
 
 
 // ***** MEDIA QUERIES *****
+
 const breakpoints = {
 	startBigPhone: 530,
 	startTablet: 700,
 	startDesktop: 1100,
 }
+
 export const mediaQueries = {
 	smPhone: `(max-width: ${breakpoints.startBigPhone - 1}px)`,
 	phone: `(min-width: ${breakpoints.startBigPhone}px) and (max-width: ${

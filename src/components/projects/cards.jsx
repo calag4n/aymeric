@@ -29,13 +29,12 @@ const useStyles = makeStyles({
   }
 });
 
-export default function OutlinedCard(prop) {
+const OutlinedCard = prop => {
   const classes = useStyles();
   const bull = <span className={classes.bullet}>•</span>;
 
   return (
 
-    
     <Card className={classes.root} variant="outlined">
       <CardContent>
         <Typography
@@ -61,3 +60,5 @@ export default function OutlinedCard(prop) {
     </Card>
   );
 }
+
+export default OutlinedCard
