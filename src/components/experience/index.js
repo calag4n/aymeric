@@ -1,103 +1,51 @@
-import React from 'react';
-import SchoolIcon from '@material-ui/icons/School';
-import WorkIcon from '@material-ui/icons/Work';
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import React from 'react'
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from 'react-vertical-timeline-component'
 
-import ensta from '../../images/experience/ensta.png'
-import tel from '../../images/experience/telecom.png'
-import ilb from '../../images/experience/ilb.png'
-import kcl from '../../images/experience/kcl.png'
-
-import 'react-vertical-timeline-component/style.min.css';
-
+import 'react-vertical-timeline-component/style.min.css'
+import { experiences } from '../../content/experiences'
 
 const Experience = () => {
-
   return (
-    
     <VerticalTimeline>
-        
-      <VerticalTimelineElement
-        className="vertical-timeline-element--work"
-        contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-        contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-        date="2011 - present"
-        iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-        icon={<WorkIcon />}
-      >
-        <h3 className="vertical-timeline-element-title">Creative Director</h3>
-        <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
-        <img src={kcl} style={{float:'right', width:'100px'}} ></img>
-        <p>
-          Creative Direction, User Experience, Visual Design, Project Management, Team Leading Creative Direction, User Experience, Visual Design, Project Management, Team Leading Creative Direction, User Experience, Visual Design, Project Management, Team Leading Creative Direction, User Experience, Visual Design, Project Management, Team Leading
-        </p>
-      </VerticalTimelineElement>
-      <VerticalTimelineElement
-        className="vertical-timeline-element--work"
-        date="2010 - 2011"
-        iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-        icon={<WorkIcon />}
-      >
-        <h3 className="vertical-timeline-element-title">Art Director</h3>
-        <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
-        <img src={ensta} style={{float:'right', width:'100px'}} ></img>
-        <p>
-          Creative Direction, User Experience, Visual Design, SEO, Online Marketing
-        </p>
-      </VerticalTimelineElement>
-      <VerticalTimelineElement
-        className="vertical-timeline-element--work"
-        date="2008 - 2010"
-        iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-        icon={<WorkIcon />}
-      >
-        <h3 className="vertical-timeline-element-title">Web Designer</h3>
-        <h4 className="vertical-timeline-element-subtitle">Los Angeles, CA</h4>
-        <img src={tel} style={{float:'right', width:'100px'}} ></img>
-        <p>
-          User Experience, Visual Design
-        </p>
+      {experiences.map(exp => {
+        const {
+          contentStyle,
+          contentArrowStyle,
+          date,
+          iconStyle,
+          Icon,
+          title,
+          location,
+          image,
+          imageAlt,
+          description,
+        } = exp
 
-      </VerticalTimelineElement>
-      <VerticalTimelineElement
-        className="vertical-timeline-element--work"
-        date="2006 - 2008"
-        iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-        icon={<WorkIcon />}
-      >
-        <h3 className="vertical-timeline-element-title">Web Designer</h3>
-        <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
-        <img src={ilb} style={{float:'right', width:'100px'}} ></img>
-        <p>
-          User Experience, Visual Design
-        </p>
-      </VerticalTimelineElement>
-      <VerticalTimelineElement
-        className="vertical-timeline-element--education"
-        date="April 2013"
-        iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-        icon={<SchoolIcon />}
-      >
-        <h3 className="vertical-timeline-element-title">Content Marketing for Web, Mobile and Social Media</h3>
-        <h4 className="vertical-timeline-element-subtitle">Online Course</h4>
-        <p>
-          Strategy, Social Media
-        </p>
-      </VerticalTimelineElement>
-      <VerticalTimelineElement
-        className="vertical-timeline-element--education"
-        date="November 2012"
-        iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-        icon={<SchoolIcon />}
-      >
-        <h3 className="vertical-timeline-element-title">Agile Development Scrum Master</h3>
-        <h4 className="vertical-timeline-element-subtitle">Certification</h4>
-        <p>
-          Creative Direction, User Experience, Visual Design
-        </p>
-      </VerticalTimelineElement>
+        return (
+          <VerticalTimelineElement
+            contentStyle={contentStyle}
+            contentArrowStyle={contentArrowStyle}
+            date={date}
+            iconStyle={iconStyle}
+            icon={<Icon />}
+          >
+            <h3 className="vertical-timeline-element-title">{title}</h3>
+            <h4 className="vertical-timeline-element-subtitle">{location}</h4>
+            {image && (
+              <img
+                src={image}
+                style={{ float: 'right', width: '100px' }}
+                alt={imageAlt}
+              />
+            )}
+            <p>{description}</p>
+          </VerticalTimelineElement>
+        )
+      })}
     </VerticalTimeline>
-
   )
 }
 
