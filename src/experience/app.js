@@ -71,6 +71,25 @@ export default function experience() {
       </VerticalTimelineElement>
       <VerticalTimelineElement
         className="vertical-timeline-element--work"
+        date="May 2019 - August 2019"
+        iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+        icon={<WorkIcon />}
+      >
+        <h3 className="vertical-timeline-element-title">Research Intership</h3>
+        <h4 className="vertical-timeline-element-subtitle">King's College London</h4>
+        <a href="https://www.institutlouisbachelier.org/en/homepage/" target="_blank" ><img src={kcl} style={{float:'right', width:'20%'}} ></img></a>
+        <p>
+          <ul>
+            <li>Improved Acute Kidney Injury diagnostic in Intensive Care Unit using machine learning (structured and unstructured data).</li>
+            <li> Performed thorough model analysis and explanation using Shapley values and statistical tools.</li>
+            <li> The whole pipeline was built in order to help improve physicians' diagnostics and is suitable for real-time implementation.</li>
+            <li> Ongoing research publication</li>
+          </ul>
+        </p>
+
+      </VerticalTimelineElement>
+      <VerticalTimelineElement
+        className="vertical-timeline-element--work"
         date="2017 - 2021"
         iconStyle={{ background: '#f50057', color: '#fff' }}
         icon={<SchoolIcon />}
