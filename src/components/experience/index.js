@@ -1,3 +1,4 @@
+//@ts-check
 import React from 'react'
 import {
   VerticalTimeline,
@@ -7,6 +8,14 @@ import {
 import 'react-vertical-timeline-component/style.min.css'
 import { experiences } from '../../content/experiences'
 
+
+/**
+ * Experience section displays a timeline
+ * 
+ * @component
+ * @example
+ * <Experience />
+ */
 const Experience = () => {
   return (
     <VerticalTimeline>

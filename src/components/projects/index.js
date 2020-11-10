@@ -1,5 +1,6 @@
+//@ts-check
 import React from 'react'
-import Card from './cards'
+import Card from './Card'
 import { Grid } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import { projects } from '../../content/projects'
@@ -11,6 +12,16 @@ const useStyles = makeStyles({
 	},
 })
 
+/**
+ * Projects section
+ * 
+ * @component
+ * @example
+ * <Projects>
+ *   <Project1 />
+ *   <Project2 />
+ * </Projects>
+ */
 const Projects = () => {
   const classes = useStyles()
   const { title, tech, kind, description, link } = projects[0]

@@ -1,6 +1,14 @@
 import React, { useRef, useState, useEffect, useCallback } from 'react'
 import { useTransition, animated } from 'react-spring'
 
+
+/**
+ * Subtitle displayed on home section
+ * 
+ * @component
+ * @example
+ * <Subtitle />
+ */
 const  Subtitle = () => {
   const ref = useRef([])
   const [items, set] = useState([])

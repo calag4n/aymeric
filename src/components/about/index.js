@@ -1,6 +1,13 @@
+//@ts-check
 import React from 'react'
-import Fade from 'react-reveal/Fade'
 
+/**
+ * About section
+ * 
+ * @component
+ * @example
+ * <About />
+ */
 const About = () => {
   return (
     <div style={{color : "white", fontSize : "large", textAlign:"center" }}>
