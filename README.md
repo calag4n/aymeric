@@ -6,7 +6,7 @@
 
 > Portfolio de Aymeric Basset.
 
-### 🏠 [Homepage](// TODO get domain name)
+### 🏠 [Homepage](https://aymericbasset.github.io/)
 
 ## Install
 
@@ -36,7 +36,7 @@ yarn start
 
 👤 **Aymeric Basset <aymeric.basset@gmail.com>**
 
-* Website: // TODO get domain name
+* Website: [https://aymericbasset.github.io/](https://aymericbasset.github.io/)
 * Github: [@AymericBasset](https://github.com/AymericBasset)
 * LinkedIn: [@aymeric-basset](https://linkedin.com/in/aymeric-basset)
 
