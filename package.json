@@ -33,7 +33,9 @@
     "clean": "npm cache clean --force",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -54,10 +56,10 @@
     ]
   },
   "bugs": "https://github.com/AymericBasset/portfolio_dev/issues",
-  "homepage": "https://TODO-get-domain.name",
+  "homepage": "http://calag4n.github.io/aymeric",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/AymericBasset/portfolio_dev"
-  },
+  }
 }
