@@ -1,23 +1,24 @@
 import { useContext } from 'react'
 import { ThemeContext } from 'styled-components'
 
-import {createMuiTheme} from '@material-ui/core'
+// import {createMuiTheme} from '@material-ui/core'
 
 // ***** CUSTOM THEME *****
 
-/* We have to merge mui theme with our custom theme provided
+/* We have to merge material-ui theme with our custom theme provided
    by styled-components to avoid context conflicts */
-const muiTheme = createMuiTheme({})
+	 
+	 export const theme = {
+		 // ...muiTheme,
+		 colors: {
+			 bg: '#253237',
+			 primary: '#EB0053',
+			 secondary: 'rgb(33, 150, 243)',
+			 white: '#fff',
+			},
+		}
+// export const muiTheme = createMuiTheme(theme)
 
-export const theme = {
-  ...muiTheme,
-	colors: {
-		bg: '#253237',
-		primary: '#f50057',
-		secondary: 'rgb(33, 150, 243)',
-		white: '#fff',
-	},
-}
 
 export const useAppTheme = () => useContext(ThemeContext)
 

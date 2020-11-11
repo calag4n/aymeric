@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom'
 import styled from 'styled-components'
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
 import Fade from 'react-reveal/Fade'
-import {  ThemeProvider } from '@material-ui/core'
+import { ThemeProvider } from 'styled-components'
+import { MuiThemeProvider, StylesProvider } from '@material-ui/core/styles'
 
 import Skills from './components/skills'
 import About from './components/about'
@@ -55,7 +56,7 @@ const App = () => {
       <SEO />
       <GlobalStyle />
       <Main role="main">
-        <Parallax ref={parallax} pages={7}>
+        <Parallax ref={parallax} pages={7} style={{right: 0, left: 0, top: 0, bottom: 0}}>
           <ParallaxLayer
             offset={0}
             speed={0}

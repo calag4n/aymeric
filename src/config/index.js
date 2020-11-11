@@ -10,16 +10,6 @@ export const config = {
   siteIcon: 'src/assets/images/icon.png',
   siteDescription: ``, // 300 characters max
   siteAuthor: 'Aymeric Basset',
-  siteKeywords: [
-    'machine learning',
-    'data scientist',
-    'engineer',
-    'ai',
-    'artificial inteligence',
-    'ML',
-    'cyber physics',
-    'portfolio',
-  ],
   siteLang: 'en',
   meta: [],
 

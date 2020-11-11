@@ -19,7 +19,7 @@ import { experiences } from '../../content/experiences'
 const Experience = () => {
   return (
     <VerticalTimeline>
-      {experiences.map(exp => {
+      {experiences.map((exp, i) => {
         const {
           contentStyle,
           contentArrowStyle,
@@ -35,6 +35,7 @@ const Experience = () => {
 
         return (
           <VerticalTimelineElement
+            key={`${title}-${i}`}
             contentStyle={contentStyle}
             contentArrowStyle={contentArrowStyle}
             date={date}

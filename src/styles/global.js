@@ -1,6 +1,8 @@
 import { createGlobalStyle } from 'styled-components'
 
 
+// TODO custom scrollbars
+
 export const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
@@ -16,6 +18,8 @@ export const GlobalStyle = createGlobalStyle`
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    height: 100%;
+    width: 100%;
   }
 
   html,

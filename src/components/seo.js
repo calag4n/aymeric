@@ -33,8 +33,6 @@ const SEO = ({ description, title, imageUrl, pageUrl, meta }) => {
   const twitter = config.makeTwitterCard(_description, _title, _imageUrl)
   const facebook = config.makeFBCard(_description, _title, _imageUrl, _pageUrl)
 
-  
-
   return (
     <Helmet
       htmlAttributes={{
@@ -46,8 +44,7 @@ const SEO = ({ description, title, imageUrl, pageUrl, meta }) => {
           name: `description`,
           content: _description,
         },
-
-      ].concat(facebook, twitter, _meta)}
+      ].concat(twitter, facebook, _meta)}
     />
   )
 }

@@ -12,7 +12,7 @@ import { theme } from '../../styles/theme'
 
 const useStyles = makeStyles({
   root: {
-    '&$selected': {
+    '&.selected': {
       backgroundColor: 'red',
       '&:hover': {
         backgroundColor: 'red',
