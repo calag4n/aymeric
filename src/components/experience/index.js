@@ -1,17 +1,17 @@
 //@ts-check
 import React from 'react'
+import styled from 'styled-components'
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from 'react-vertical-timeline-component'
-
+import ReactMarkdown from 'react-markdown'
 import 'react-vertical-timeline-component/style.min.css'
 import { experiences } from '../../content/experiences'
 
-
 /**
  * Experience section displays a timeline
- * 
+ *
  * @component
  * @example
  * <Experience />
@@ -27,7 +27,8 @@ const Experience = () => {
           iconStyle,
           Icon,
           title,
-          location,
+          subtitle,
+          imageLink,
           image,
           imageAlt,
           description,
@@ -35,7 +36,7 @@ const Experience = () => {
 
         return (
           <VerticalTimelineElement
-            key={`${title}-${i}`}
+            key={`experience-${title}-${i}`}
             contentStyle={contentStyle}
             contentArrowStyle={contentArrowStyle}
             date={date}
@@ -43,15 +44,17 @@ const Experience = () => {
             icon={<Icon />}
           >
             <h3 className="vertical-timeline-element-title">{title}</h3>
-            <h4 className="vertical-timeline-element-subtitle">{location}</h4>
+            <h4 className="vertical-timeline-element-subtitle">{subtitle}</h4>
             {image && (
-              <img
-                src={image}
-                style={{ float: 'right', width: '100px' }}
-                alt={imageAlt}
-              />
+              <a href={imageLink} target="_blank" rel="noreferrer">
+                <Img
+                  src={image}
+                  style={{ float: 'right', width: '20%' }}
+                  alt={imageAlt}
+                />
+              </a>
             )}
-            <p>{description}</p>
+            <ReactMarkdown>{description}</ReactMarkdown>
           </VerticalTimelineElement>
         )
       })}
@@ -60,3 +63,8 @@ const Experience = () => {
 }
 
 export default Experience
+
+const Img = styled.img`
+  float: right;
+  width: 20%;
+`

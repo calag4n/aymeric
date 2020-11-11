@@ -44,8 +44,8 @@ const Projects = () => {
 				className={classes.gridContainer}
 				justify='center'
 			>
-				{Array.from(Array(6).keys()).map( _ => (
-					<Grid item xs={12} sm={6} md={4} key={_}>
+				{projects.map( ({title, tech, kind, description, link}, i) => (
+					<Grid item xs={12} sm={6} md={4} key={`project-${title}-${i}`}>
 						<Card
 							title={title}
 							tech={tech}
