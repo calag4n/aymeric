@@ -3,7 +3,7 @@ import { theme } from '../styles/theme'
 export const config = {
   siteTitle: 'Aymeric Basset | Portfolio', // Navigation and Site Title
   siteTitleAlt: 'Aymeric Basset', // Title short version for manifest
-  siteUrl: '', // Url of your site. No trailing slash!
+  siteUrl: 'https://aymericbasset.github.io/', // Url of your site. No trailing slash!
   siteLanguage: 'en-EN', // Language Tag on <html> element
   siteLogo: 'logo.png', // Used for SEO and manifest
   siteLogoAlt: 'Logo Aymeric Basset',

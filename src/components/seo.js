@@ -20,7 +20,7 @@ import { config } from '../config'
  *   meta={[{property: 'meta-property', content: 'meta-content'}]}
  *   title='Page title'
  *   imageUrl='https://urlto.img'
- *   pageUrl='https://urltothepage.com'
+ *   pageUrl='https://site.com/page-url'
  * />
  */
 const SEO = ({ description, title, imageUrl, pageUrl, meta }) => {

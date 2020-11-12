@@ -25,7 +25,7 @@ export const experiences = [
     description: `
 Last year advanced specialization resulting from the partnership between Ensta Paris and Telecom Paris.
 
-Coursework includes: Deep Learning, Reinforcement Learning, Metaheuristic Optimization, Natural Language Processing, Statistical Learning, Multi-agent Programming, GPGPU Programming, Perception for autonomous systems, Large-scale statistical learning.`,
+Coursework includes: *Deep Learning, Reinforcement Learning, Metaheuristic Optimization, Natural Language Processing, Statistical Learning, Multi-agent Programming, GPGPU Programming, Perception for autonomous systems, Large-scale statistical learning*.`,
   },
   {
     contentStyle: {},
@@ -39,7 +39,7 @@ Coursework includes: Deep Learning, Reinforcement Learning, Metaheuristic Optimi
     image: kcl,
     imageAlt: `King's college London logo`,
     description: `
-- Scrapped medical web data to create a comprehensive disease database and applied classification and clustering techniques on it.
+- Scrapped medical web data to create a *comprehensive disease database* and applied **classification and clustering techniques** on it.
 - Built a simplified interface for doctors to generate randomized patients and test diagnostic tools.
 - Worked on improving state-of-the-art medical annotation tool for drug/dosage NER.`,
   },
@@ -55,9 +55,9 @@ Coursework includes: Deep Learning, Reinforcement Learning, Metaheuristic Optimi
     image: ilb,
     imageAlt: 'Institut Louis Bachelier logo',
     description: `
-- Researched GAN applications for financial time series
-- Prediction of food insecurity due to droughts in Africa using spatial and temporal data
-- Built a tool to complete missing values in industrial databases using sequential models with customizable parameters`,
+- Researched *GAN applications* for financial time series
+- **Prediction** of food insecurity due to droughts in Africa using **spatial and temporal data**
+- Built a tool to complete missing values in industrial databases using **sequential models with customizable parameters**`,
   },
   {
     contentStyle: {},
@@ -71,10 +71,10 @@ Coursework includes: Deep Learning, Reinforcement Learning, Metaheuristic Optimi
     image: kcl,
     imageAlt: `King's college London logo`,
     description: `
-- Improved Acute Kidney Injury diagnostic in Intensive Care Unit using machine learning (structured and unstructured data).
-- Performed thorough model analysis and explanation using Shapley values and statistical tools.
-- The whole pipeline was built in order to help improve physicians' diagnostics and is suitable for real-time implementation.
-- Ongoing research publication.`,
+- Improved Acute Kidney Injury diagnostic in Intensive Care Unit using **machine learning** (*structured and unstructured data*).
+- Performed thorough *model analysis* and explanation using **Shapley values** and statistical tools.
+- The whole pipeline was built in order to help improve physicians' diagnostics and is suitable for **real-time implementation**.
+- Ongoing *research publication*.`,
   },
   {
     contentStyle: {},
@@ -88,13 +88,13 @@ Coursework includes: Deep Learning, Reinforcement Learning, Metaheuristic Optimi
     image: ensta,
     imageAlt: 'ENSTA logo',
     description: `
-ENSTA Paris belongs to the foremost graduate schools of engineering in France called "Grandes Ecoles" and awards the french "Diplôme d'Ingénieur".
+ENSTA Paris belongs to the **foremost graduate schools of engineering** in France called *"Grandes Ecoles"* and awards the french *"Diplôme d'Ingénieur"*.
 
 Coursework includes core scientific training in:
-- Mechanics (Solid, Fluid, Quantum)
-- Mathematics (Statistics & Probability, Calculus, Geometry)
-- Computer Sciences (Signal Processing, Software Engineering, Databases, Parallel Programming)
-- Biology (introduction to Genetic and Immunology)`,
+- **Mechanics** (Solid, Fluid, Quantum)
+- **Mathematics** (Statistics & Probability, Calculus, Geometry)
+- **Computer Sciences** (Signal Processing, Software Engineering, Databases, Parallel Programming)
+- **Biology** (introduction to Genetic and Immunology)`,
   },
   {
     contentStyle: {},
@@ -108,8 +108,8 @@ Coursework includes core scientific training in:
     image: champo,
     imageAlt: 'Champollion logo',
     description: `
-2 years of very demanding scientific courses with prior selection before competing in nationwide exams to enter Top French Graduate Schools of Engineering.
+2 years of very demanding scientific courses with prior selection before competing in nationwide exams to enter **Top French Graduate Schools of Engineering**.
     
-Ranked 303 (top 5% overall)`,
+Ranked 303 (**top 5%** overall)`,
   },
 ]

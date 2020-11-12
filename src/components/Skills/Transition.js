@@ -1,5 +1,4 @@
 //@ts-check
-import React from 'react'
 import PropTypes from 'prop-types'
 import { useSpring, animated } from 'react-spring/web.cjs' // web.cjs is required for IE 11 support
 import Collapse from '@material-ui/core/Collapse'
@@ -8,6 +7,7 @@ import Collapse from '@material-ui/core/Collapse'
  * Describe the transition of the Mui TreeItem
  * 
  * @component
+ * @param {object} props
  * @example
  * <Transition in={true} />
  */

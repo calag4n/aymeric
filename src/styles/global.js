@@ -9,17 +9,19 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   html{
-    background-color: #253237;
+    background-color: ${({ theme }) => theme.colors.bg};
   }
 
   body{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    font-family: ${({ theme }) => theme.fonts.family.text};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     height: 100%;
     width: 100%;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: ${({ theme }) => theme.fonts.family.title};
   }
 
   html,
@@ -38,7 +40,6 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: ${({ theme }) => theme.fonts.family.code};
 }
 `

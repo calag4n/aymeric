@@ -1,17 +1,19 @@
-//@ts-check
-import React from 'react'
-import TreeItem from '@material-ui/lab/TreeItem'
+import MuiTreeItem from '@material-ui/lab/TreeItem'
 import Transition from './Transition'
 import { fade, withStyles } from '@material-ui/core'
+import { useAppTheme } from '../../styles/theme'
 
 /**
  * Styling Mui HOC
  * 
  * @component
  * @example
- * <StyledTreeItem />
+ * <TreeItem />
  */
-const StyledTreeItem = withStyles(theme => ({
+const TreeItem = withStyles(theme => {
+  const {fonts} = useAppTheme()
+
+  return {
   iconContainer: {
     '& .close': {
       opacity: 0.3,
@@ -24,11 +26,11 @@ const StyledTreeItem = withStyles(theme => ({
   },
 
   label: {
-    fontSize: '30px',
+    fontSize: fonts.size.treeView,
     '&:hover': {
       backgroundColor: 'transparent',
     },
   },
-}))(props => <TreeItem {...props} TransitionComponent={Transition} />)
+}})(props => <MuiTreeItem {...props} TransitionComponent={Transition} />)
 
-export default StyledTreeItem
+export default TreeItem
