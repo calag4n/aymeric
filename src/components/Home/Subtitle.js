@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect, useCallback } from 'react'
 import { useTransition, animated } from 'react-spring'
+import useWindowSize from '../../hooks/useWindowSize'
 import { useAppTheme } from '../../styles/theme'
 
 /**
@@ -11,8 +12,12 @@ import { useAppTheme } from '../../styles/theme'
  */
 const Subtitle = () => {
   const ref = useRef([])
-  const [items, set] = useState([])
-  const { colors, fonts } = useAppTheme()
+  const [items, setItems] = useState([])
+
+  const { colors, fonts, spacings } = useAppTheme()
+  const { windowType } = useWindowSize()
+
+  let margin = spacings.homeSubtitle[windowType]
 
   const transitions = useTransition(items, null, {
     from: {
@@ -24,7 +29,7 @@ const Subtitle = () => {
     },
 
     enter: [
-      { opacity: 1, height: 80, innerHeight: 80 },
+      { opacity: 1, height: margin, innerHeight: 80 },
       {
         transform: 'perspective(600px) rotateX(180deg)',
         color: colors.primary,
@@ -44,25 +49,33 @@ const Subtitle = () => {
   const reset = useCallback(() => {
     ref.current.map(clearTimeout)
     ref.current = []
-    set([])
+    setItems([])
     ref.current.push(
       setTimeout(
         () =>
-          set(['Data Scientist', 'Machine Learning Engineer', 'AI Researcher']),
+          setItems([
+            'Data Scientist',
+            'Machine Learning Engineer',
+            'AI Researcher',
+          ]),
         2000
       )
     )
     ref.current.push(
-      setTimeout(() => set(['Data Scientist', 'AI Researcher']), 5000)
+      setTimeout(() => setItems(['Data Scientist', 'AI Researcher']), 5000)
     )
     ref.current.push(
       setTimeout(
         () =>
-          set(['Data Scientist', 'Machine Learning Engineer', 'AI Researcher']),
+          setItems([
+            'Data Scientist',
+            'Machine Learning Engineer',
+            'AI Researcher',
+          ]),
         8000
       )
     )
-    ref.current.push(setTimeout(() => set(['Data Scientist']), 11000))
+    ref.current.push(setTimeout(() => setItems(['Data Scientist']), 11000))
   }, [])
 
   useEffect(() => reset(), [reset])

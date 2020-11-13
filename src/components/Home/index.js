@@ -1,10 +1,9 @@
-//@ts-check
 import PropTypes from 'prop-types'
 import Fade from 'react-reveal/Fade'
 import styled from 'styled-components'
 import withParallaxLayer from '../../HOC/withParallaxLayer'
 import Subtitle from './Subtitle'
-import { useAppTheme } from '../../styles/theme'
+import { device, useAppTheme } from '../../styles/theme'
 
 /**
  * @component
@@ -41,9 +40,8 @@ const Section = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
   height: 100%;
-  width: 80vw;
+  width: auto;
 `
 
 const H1 = styled.h1`

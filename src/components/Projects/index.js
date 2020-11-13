@@ -1,4 +1,3 @@
-//@ts-check
 import { Grid as MuiGrid } from '@material-ui/core'
 import styled from 'styled-components'
 

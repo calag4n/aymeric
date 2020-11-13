@@ -44,7 +44,7 @@ const Card = ({ tech, title, kind, description, link }) => {
 
           <Kind color="textSecondary">{kind}</Kind>
 
-          <Typography variant="body2" component="p">
+          <Typography variant="body2" component="div">
             <ReactMarkdown>{description}</ReactMarkdown>
           </Typography>
         </CardContent>

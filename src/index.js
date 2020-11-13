@@ -11,7 +11,6 @@ import Contact from './components/Contact'
 import { GlobalStyle } from './styles/global'
 import { theme } from './styles/theme'
 
-
 import SEO from './components/seo'
 import Home from './components/Home'
 import ParallaxContainer from './components/parallax.js/Container'
@@ -25,28 +24,31 @@ import ImagesLayer from './components/parallax.js/ImagesLayer'
  * <App />
  */
 const App = () => {
-
+  
   return (
     <>
       <SEO />
       <GlobalStyle />
 
       <Main role="main">
-        <ParallaxContainer pages={7}>
-
+        <ParallaxContainer pages={7.5}>
           <Home offset={0} speed={0.1} />
 
           <About offset={1} speed={0.1} />
 
           <Experience offset={2.9} speed={0.1} />
 
-          <Skills offset={4.5} speed={0} />
+          <Skills
+            offset={4.5}
+            speed={0}
+            layerStyle={{ alignItems: 'flex-start', justifyContent: 'center'}}
+          />
 
-          <Projects offset={5} speed={0} />
+          <Projects offset={5.5} speed={0} />
 
-          <Contact offset={6} speed={0} />
+          <Contact offset={6.5} speed={0} />
 
-          <ImagesLayer/>
+          <ImagesLayer />
         </ParallaxContainer>
       </Main>
     </>

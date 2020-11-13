@@ -7,6 +7,11 @@ import CloseSquare from './CloseSquare'
 import TreeItem from './TreeItem'
 import { skills } from '../../content/skills'
 import withParallaxLayer from '../../HOC/withParallaxLayer'
+import { useEffect, useRef } from 'react'
+import useSectionResize from '../../hooks/useSectionResize'
+
+import elementResizeEvent, {unbind} from 'element-resize-event'
+
 
 /**
  * The skills tree view
@@ -20,6 +25,7 @@ import withParallaxLayer from '../../HOC/withParallaxLayer'
  * </TreeView>
  */
 const CustomizedTreeView = () => {
+
   /**
    * Recursive function that render nested objects in TreeItem components
    *
@@ -36,24 +42,48 @@ const CustomizedTreeView = () => {
     </TreeItem>
   )
 
+  // const handleToggle = event => {
+  //   // const height = sectionRef.current.offsetHeight
+  //   const height = document.getElementById('skills-section').clientHeight
+  //   const {target} = event
+  //   console.log(target.height)
+  // }
+
+    const [skillsHeight, projectsOffset] = useSectionResize('skills-section')
+    
+ 
+    
+  
+
   return (
-    <TreeView
-      defaultExpanded={['0']}
-      defaultCollapseIcon={<MinusSquare />}
-      defaultExpandIcon={<PlusSquare />}
-      defaultEndIcon={<CloseSquare />}
-    >
-      {renderTree(skills)}
-    </TreeView>
+    <Section 
+    // ref={skillsRef} 
+    id='skills-section'>
+      <TreeView
+        defaultExpanded={['0']}
+        defaultCollapseIcon={<MinusSquare />}
+        defaultExpandIcon={<PlusSquare />}
+        defaultEndIcon={<CloseSquare />}
+        // onNodeToggle={e=> handleToggle(e)}
+      >
+        {renderTree(skills)}
+      </TreeView>
+    </Section>
   )
 }
 
 export default withParallaxLayer(CustomizedTreeView)
 
+const Section = styled.section`
+  padding: 0 ${({ theme }) => theme.spacings.sectionPadding};
+  padding-top: ${({ theme }) => theme.spacings.skillsPaddingTop};
+  z-index: 99;
+`;
+
 const TreeView = styled(MuiTreeView)`
   margin: auto;
   color: ${({ theme }) => theme.colors.primary};
-  height: 2000px;
+  /* height: 2000px; */
   flex-grow: 1;
   max-width: 600px;
 `
