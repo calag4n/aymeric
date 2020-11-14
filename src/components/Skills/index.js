@@ -7,11 +7,7 @@ import CloseSquare from './CloseSquare'
 import TreeItem from './TreeItem'
 import { skills } from '../../content/skills'
 import withParallaxLayer from '../../HOC/withParallaxLayer'
-import { useEffect, useRef } from 'react'
-
-import elementResizeEvent, { unbind } from 'element-resize-event'
-import ResizeObserver from 'rc-resize-observer'
-import { useSizings } from '../../contexts/sizingsContext'
+import { useSkillSizing } from '../../contexts/skillSizingContext'
 
 /**
  * The skills tree view
@@ -25,9 +21,7 @@ import { useSizings } from '../../contexts/sizingsContext'
  * </TreeView>
  */
 const Skills = () => {
-
-  const {setSkillSizing} = useSizings()
-
+  const { setSkillSizing } = useSkillSizing()
 
   /**
    * Recursive function that render nested objects in TreeItem components
@@ -45,8 +39,6 @@ const Skills = () => {
     </TreeItem>
   )
 
-
-
   return (
     <Section
       // ref={skillsRef}
@@ -57,15 +49,13 @@ const Skills = () => {
         defaultCollapseIcon={<MinusSquare />}
         defaultExpandIcon={<PlusSquare />}
         defaultEndIcon={<CloseSquare />}
-        onNodeToggle={(_, nodes)=> setSkillSizing(nodes)}
+        onNodeToggle={(_, nodes) => setSkillSizing(nodes)}
       >
         {renderTree(skills)}
       </TreeView>
     </Section>
   )
 }
-
-
 
 export default withParallaxLayer(Skills)
 

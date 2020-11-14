@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import MuiTreeItem from '@material-ui/lab/TreeItem'
 import Transition from './Transition'
 import { fade, withStyles } from '@material-ui/core'
@@ -5,36 +6,20 @@ import { useAppTheme } from '../../styles/theme'
 import styled from 'styled-components'
 
 /**
- * Styling Mui HOC
- * 
+ * Wraps each skill item
+ *
  * @component
+ * @param {object} props
  * @example
  * <TreeItem />
  */
-// const TreeItem = withStyles(theme => {
-//   const {fonts} = useAppTheme()
+const TreeItem = props => (
+  <StyledTreeItem {...props} TransitionComponent={Transition} />
+)
 
-//   return {
-//   iconContainer: {
-//     '& .close': {
-//       opacity: 0.3,
-//     },
-//   },
-//   group: {
-//     marginLeft: 0,
-//     paddingLeft: 50,
-//     borderLeft: `1px dashed ${fade(theme.palette.text.primary, 0.4)}`,
-//   },
-
-//   label: {
-//     fontSize: fonts.size.treeView,
-//     '&:hover': {
-//       backgroundColor: 'transparent',
-//     },
-//   },
-// }})(props => <MuiTreeItem {...props} TransitionComponent={Transition} />)
-
-const TreeItem = props => <StyledTreeItem {...props} TransitionComponent={Transition} />
+TreeItem.propTypes = {
+  props: PropTypes.object.isRequired,
+}
 
 export default TreeItem
 
@@ -48,12 +33,12 @@ const StyledTreeItem = styled(MuiTreeItem)`
   & .MuiTreeItem-group {
     margin-left: 0;
     padding-left: 50px;
-    border-left: 1px dashed rgba(0, 0, 0, .4);
+    border-left: 1px dashed rgba(0, 0, 0, 0.4);
   }
 
-  & .MuiTreeItem-label{
+  & .MuiTreeItem-label {
     font-size: ${({ theme }) => theme.fonts.size.treeView};
-    &:hover{
+    &:hover {
       background-color: transparent;
     }
   }

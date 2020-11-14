@@ -6,10 +6,10 @@ export const config = {
     /**
      * lines represent how many lines contain each expendable item.
      */
-    lines: [0, 0, 6, 6, 9, 6, 1, 1, 3],
+    lines: [null, 0, 6, 6, 9, 6, 1, 1, 3],
 
     multiplier: 0.05,
-    
+
     /**
      * we have to change those values to make room for skills section
      */

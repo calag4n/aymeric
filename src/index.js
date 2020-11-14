@@ -15,7 +15,7 @@ import SEO from './components/seo'
 import Home from './components/Home'
 import ParallaxContainer from './components/parallax.js/Container'
 import ImagesLayer from './components/parallax.js/ImagesLayer'
-import { SizingsProvider, useSizings } from './contexts/sizingsContext'
+import { SizingsProvider, useSkillSizing } from './contexts/skillSizingContext'
 
 /**
  * The App root component
@@ -25,9 +25,9 @@ import { SizingsProvider, useSizings } from './contexts/sizingsContext'
  * <App />
  */
 const App = () => {
-  // const [skillsHeight, projectsOffset, handleResize] = useSectionResize('skills-section', 4.9)
-
-  const {skillSizing:{projectsOffset, contactOffset, pages}} = useSizings()
+  const {
+    skillSizing: { projectsOffset, contactOffset, pages },
+  } = useSkillSizing()
 
   return (
     <>
@@ -36,27 +36,27 @@ const App = () => {
 
       <Main role="main">
         <ParallaxContainer pages={pages}>
-            <Home offset={0} speed={0.1} />
+          <Home offset={0} speed={0.1} />
 
-            <About offset={1} speed={0.1} />
+          <About offset={1} speed={0.1} />
 
-            <Experience offset={2.9} speed={0.2} />
+          <Experience offset={2.9} speed={0.2} />
 
-            <Skills
-              offset={4.3}
-              speed={0.1}
-              layerStyle={{
-                alignItems: 'flex-start',
-                justifyContent: 'center',
-              }}
-            />
+          <Skills
+            offset={4.3}
+            speed={0.1}
+            layerStyle={{
+              alignItems: 'flex-start',
+              justifyContent: 'center',
+            }}
+          />
 
-            <Projects offset={projectsOffset} speed={-0.1} />
+          <Projects offset={projectsOffset} speed={-0.1} />
 
-            <Contact offset={contactOffset} speed={0} />
+          <Contact offset={contactOffset} speed={0} />
 
-            <ImagesLayer />
-          </ParallaxContainer>
+          <ImagesLayer />
+        </ParallaxContainer>
       </Main>
     </>
   )
@@ -72,9 +72,9 @@ const Main = styled.main`
  * @component
  *
  * @example
- * <ThemeProvider theme={theme}>
+ * <Contexts>
  *    <App />
- * </ThemeProvider>
+ * </Contexts>
  */
 const Contexts = () => {
   return (
