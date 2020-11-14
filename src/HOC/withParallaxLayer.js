@@ -9,7 +9,7 @@ import { ParallaxLayer } from 'react-spring/renderprops-addons'
  * @example
  * withParallaxLayer(SectionComponent)
  */
-const withParallaxLayer = Component => ({offset,  speed, factor, layerStyle }) => {
+const withParallaxLayer = Component => ({offset,  speed, factor, layerStyle, ...props }) => {
   return (
     <ParallaxLayer
       offset={offset}
@@ -22,7 +22,7 @@ const withParallaxLayer = Component => ({offset,  speed, factor, layerStyle }) =
         ...layerStyle
       }}
     >
-      <Component/>
+      <Component {...props}/>
     </ParallaxLayer>
   )
 }

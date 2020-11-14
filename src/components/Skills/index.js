@@ -8,10 +8,10 @@ import TreeItem from './TreeItem'
 import { skills } from '../../content/skills'
 import withParallaxLayer from '../../HOC/withParallaxLayer'
 import { useEffect, useRef } from 'react'
-import useSectionResize from '../../hooks/useSectionResize'
 
-import elementResizeEvent, {unbind} from 'element-resize-event'
-
+import elementResizeEvent, { unbind } from 'element-resize-event'
+import ResizeObserver from 'rc-resize-observer'
+import { useSizings } from '../../contexts/sizingsContext'
 
 /**
  * The skills tree view
@@ -24,7 +24,10 @@ import elementResizeEvent, {unbind} from 'element-resize-event'
  *   </TreeItem>
  * </TreeView>
  */
-const CustomizedTreeView = () => {
+const Skills = () => {
+
+  const {setSkillSizing} = useSizings()
+
 
   /**
    * Recursive function that render nested objects in TreeItem components
@@ -42,29 +45,19 @@ const CustomizedTreeView = () => {
     </TreeItem>
   )
 
-  // const handleToggle = event => {
-  //   // const height = sectionRef.current.offsetHeight
-  //   const height = document.getElementById('skills-section').clientHeight
-  //   const {target} = event
-  //   console.log(target.height)
-  // }
 
-    const [skillsHeight, projectsOffset] = useSectionResize('skills-section')
-    
- 
-    
-  
 
   return (
-    <Section 
-    // ref={skillsRef} 
-    id='skills-section'>
+    <Section
+      // ref={skillsRef}
+      id="skills-section"
+    >
       <TreeView
-        defaultExpanded={['0']}
+        // defaultExpanded={['1']}
         defaultCollapseIcon={<MinusSquare />}
         defaultExpandIcon={<PlusSquare />}
         defaultEndIcon={<CloseSquare />}
-        // onNodeToggle={e=> handleToggle(e)}
+        onNodeToggle={(_, nodes)=> setSkillSizing(nodes)}
       >
         {renderTree(skills)}
       </TreeView>
@@ -72,18 +65,20 @@ const CustomizedTreeView = () => {
   )
 }
 
-export default withParallaxLayer(CustomizedTreeView)
+
+
+export default withParallaxLayer(Skills)
 
 const Section = styled.section`
   padding: 0 ${({ theme }) => theme.spacings.sectionPadding};
   padding-top: ${({ theme }) => theme.spacings.skillsPaddingTop};
   z-index: 99;
-`;
+  min-width: 600px;
+`
 
 const TreeView = styled(MuiTreeView)`
   margin: auto;
   color: ${({ theme }) => theme.colors.primary};
-  /* height: 2000px; */
   flex-grow: 1;
   max-width: 600px;
 `

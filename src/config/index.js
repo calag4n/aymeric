@@ -1,6 +1,24 @@
 import { theme } from '../styles/theme'
 
 export const config = {
+
+  skillsViewComputing:{
+    /**
+     * lines represent how many lines contain each expendable item.
+     */
+    lines: [0, 0, 6, 6, 9, 6, 1, 1, 3],
+
+    multiplier: 0.05,
+    
+    /**
+     * we have to change those values to make room for skills section
+     */
+    pagesInitialValue: 7.2,
+    projectsInitialOffset: 4.9,
+    contactInitialOffset: 6.2,
+  },
+
+
   siteTitle: 'Aymeric Basset | Portfolio', // Navigation and Site Title
   siteTitleAlt: 'Aymeric Basset', // Title short version for manifest
   siteUrl: 'https://aymericbasset.github.io/', // Url of your site. No trailing slash!

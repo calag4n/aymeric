@@ -32,7 +32,7 @@ export const theme = {
       homeTitle: 'clamp(16px, 7vw, 80px)',
       homeSubtitle: 'clamp(14px, 3.2vw, 50px)',
       sectionTitle: '2em',
-      treeView: 30,
+      treeView: '30px',
     },
   },
 

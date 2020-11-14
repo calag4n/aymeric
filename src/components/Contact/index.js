@@ -1,4 +1,3 @@
-//@ts-check
 import styled from 'styled-components'
 import MuiButton from '@material-ui/core/Button'
 import withParallaxLayer from '../../HOC/withParallaxLayer'

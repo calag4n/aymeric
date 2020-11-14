@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
 import { getSvgUrl } from '../../utils'
+import stars from '../../images/stars.svg'
 
 
 /**
@@ -25,11 +26,12 @@ const Container = ({pages, children}) => {
         speed={0}
         factor={6}
         style={{
-          backgroundImage: getSvgUrl('stars', true),
+          // backgroundImage: getSvgUrl('stars', true),
+          backgroundImage: 'url(./assets/images/stars.svg)',
           backgroundSize: 'cover',
+          transition: 'background-image 4s ease-in-out',
         }}
       />
-
       {children} 
     </Parallax>
   )

@@ -16,6 +16,7 @@
     "@material-ui/icons": "^4.9.1",
     "@material-ui/lab": "^4.0.0-alpha.56",
     "element-resize-event": "^3.0.3",
+    "rc-resize-observer": "^0.2.6",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
@@ -24,6 +25,7 @@
     "react-scripts": "4.0.0",
     "react-spring": "^8.0.27",
     "react-vertical-timeline-component": "^3.3.1",
+    "resize-event": "^2.0.0",
     "styled-components": "^5.2.1",
     "web-vitals": "^0.2.4"
   },
