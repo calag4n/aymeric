@@ -9,7 +9,7 @@ import styled from 'styled-components'
  * Wraps each skill item
  *
  * @component
- * @param {object} props
+ * @param {object | undefined} props
  * @example
  * <TreeItem />
  */
@@ -18,7 +18,7 @@ const TreeItem = props => (
 )
 
 TreeItem.propTypes = {
-  props: PropTypes.object.isRequired,
+  props: PropTypes.object,
 }
 
 export default TreeItem

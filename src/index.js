@@ -16,6 +16,7 @@ import Home from './components/Home'
 import ParallaxContainer from './components/parallax.js/Container'
 import ImagesLayer from './components/parallax.js/ImagesLayer'
 import { SizingsProvider, useSkillSizing } from './contexts/skillSizingContext'
+import useWindowSize from './hooks/useWindowSize'
 
 /**
  * The App root component
@@ -28,6 +29,9 @@ const App = () => {
   const {
     skillSizing: { projectsOffset, contactOffset, pages },
   } = useSkillSizing()
+  const { windowType } = useWindowSize()
+
+  let screenOption = windowType === 'smallPhone' ? 0.1 : 0
 
   return (
     <>
@@ -35,7 +39,7 @@ const App = () => {
       <GlobalStyle />
 
       <Main role="main">
-        <ParallaxContainer pages={pages}>
+        <ParallaxContainer pages={pages + (screenOption*4)}>
           <Home offset={0} speed={0.1} />
 
           <About offset={1} speed={0.1} />
@@ -51,9 +55,9 @@ const App = () => {
             }}
           />
 
-          <Projects offset={projectsOffset} speed={-0.1} />
+          <Projects offset={projectsOffset + (screenOption*2)} speed={-0.1} />
 
-          <Contact offset={contactOffset} speed={0} />
+          <Contact offset={contactOffset + (screenOption*4)} speed={0} />
 
           <ImagesLayer />
         </ParallaxContainer>

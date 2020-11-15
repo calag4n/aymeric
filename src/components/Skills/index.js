@@ -8,6 +8,7 @@ import TreeItem from './TreeItem'
 import { skills } from '../../content/skills'
 import withParallaxLayer from '../../HOC/withParallaxLayer'
 import { useSkillSizing } from '../../contexts/skillSizingContext'
+import { device } from '../../styles/theme'
 
 /**
  * The skills tree view
@@ -63,12 +64,22 @@ const Section = styled.section`
   padding: 0 ${({ theme }) => theme.spacings.sectionPadding};
   padding-top: ${({ theme }) => theme.spacings.skillsPaddingTop};
   z-index: 99;
-  min-width: 600px;
+
+  & *{
+
+  transition: width .2s ease-in-out;
+  }
+  /* min-width: 600px; */
+
+  /* @media ${device.smallPhone}{
+    padding-top: 0;
+
+  } */
 `
 
 const TreeView = styled(MuiTreeView)`
   margin: auto;
   color: ${({ theme }) => theme.colors.primary};
   flex-grow: 1;
-  max-width: 600px;
+  /* max-width: 600px; */
 `

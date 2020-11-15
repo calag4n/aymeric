@@ -32,7 +32,7 @@ export const theme = {
       homeTitle: 'clamp(16px, 7vw, 80px)',
       homeSubtitle: 'clamp(14px, 3.2vw, 50px)',
       sectionTitle: '2em',
-      treeView: '30px',
+      treeView: 'clamp(15px, 3.5vw, 30px)',
     },
   },
 
@@ -50,7 +50,7 @@ export const theme = {
       desktop: 120,
     },
     sectionPadding: '40px',
-    skillsPaddingTop: '14em',
+    skillsPaddingTop: 'clamp(100px, 3vw, 14em)',
   },
 }
 

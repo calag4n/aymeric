@@ -1,5 +1,6 @@
 import { useReducer, createContext, useContext } from 'react'
 import { config } from '../config'
+import useWindowSize from '../hooks/useWindowSize'
 import { arraysDiff } from '../utils'
 import { initialState } from './skillSizingObject'
 
@@ -7,19 +8,23 @@ const sizingsContext = createContext({})
 
 export const useSkillSizing = () => useContext(sizingsContext)
 
-export const SizingsProvider = ({ children }) => {
+export const SizingsProvider = ({children}) => {
   const { lines, multiplier } = config.skillsViewComputing
+  const { windowType } = useWindowSize()
+
+  let screenOption = windowType === 'smallPhone' ? 0.02 : 0
+  
 
   const reducer = (state, nodes) => {
     let newState = JSON.parse(JSON.stringify(state))
-    let collapsed = arraysDiff(newState.activeView, nodes)
+    const collapsed = arraysDiff(newState.activeView, nodes)
     let collapsedLines = 0
 
     collapsed.forEach(node => {
       collapsedLines += lines[node]
     })
 
-    let factor = multiplier * collapsedLines
+    let factor = (multiplier - screenOption) * collapsedLines
     factor.toFixed(2)
 
     const action =
@@ -39,7 +44,7 @@ export const SizingsProvider = ({ children }) => {
           nodes.forEach(node => {
             collapsedLines += lines[Number(node)]
           })
-          factor = multiplier * collapsedLines
+          factor = (multiplier - screenOption) * collapsedLines
           factor.toFixed(2)
           newState.activeView = []
         }
