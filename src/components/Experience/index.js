@@ -8,6 +8,7 @@ import ReactMarkdown from 'react-markdown'
 import 'react-vertical-timeline-component/style.min.css'
 import { experiences } from '../../content/experiences'
 import withParallaxLayer from '../../HOC/withParallaxLayer'
+import { useExperienceSizing } from '../../hooks/sectionsSizing/useExperienceSizing'
 
 /**
  * Experience section displays a timeline
@@ -17,6 +18,7 @@ import withParallaxLayer from '../../HOC/withParallaxLayer'
  * <Experience />
  */
 const Experience = () => {
+  const xp = useExperienceSizing()
   return (
     <section>
       <H1>My Background</H1>

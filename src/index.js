@@ -15,8 +15,11 @@ import SEO from './components/seo'
 import Home from './components/Home'
 import ParallaxContainer from './components/parallax.js/Container'
 import ImagesLayer from './components/parallax.js/ImagesLayer'
-import { SizingsProvider, useSkillSizing } from './contexts/skillSizingContext'
+import { SizingsProvider } from './contexts/sectionsSizingContext'
 import useWindowSize from './hooks/useWindowSize'
+import { useSectionsSizing } from './contexts/sectionsSizingContext'
+import { useEffect, useState } from 'react'
+import { log } from './utils/log'
 
 /**
  * The App root component
@@ -27,11 +30,18 @@ import useWindowSize from './hooks/useWindowSize'
  */
 const App = () => {
   const {
-    skillSizing: { projectsOffset, contactOffset, pages },
-  } = useSkillSizing()
-  const { windowType } = useWindowSize()
-
-  let screenOption = windowType === 'smallPhone' ? 0.1 : 0
+    sizes,
+    sizes: {
+      pagesValue,
+      homeOffset,
+      aboutOffset,
+      experienceOffset,
+      skillsOffset,
+      projectsOffset,
+      contactOffset,
+    },
+    setSizes,
+  } = useSectionsSizing()
 
   return (
     <>
@@ -39,25 +49,24 @@ const App = () => {
       <GlobalStyle />
 
       <Main role="main">
-        <ParallaxContainer pages={pages + (screenOption*4)}>
-          <Home offset={0} speed={0.1} />
+        <ParallaxContainer pages={pagesValue || 7}>
+          <Home offset={homeOffset} speed={0.1} />
 
-          <About offset={1} speed={0.1} />
+          <About offset={aboutOffset} speed={0.1} />
 
-          <Experience offset={2.9} speed={0.2} />
+          <Experience offset={experienceOffset} speed={0.2} />
 
           <Skills
-            offset={4.3}
-            speed={0.1}
+            offset={skillsOffset}
+            speed={0.3}
             layerStyle={{
               alignItems: 'flex-start',
-              justifyContent: 'center',
             }}
           />
 
-          <Projects offset={projectsOffset + (screenOption*2)} speed={-0.1} />
+          <Projects offset={projectsOffset} speed={-0.1} />
 
-          <Contact offset={contactOffset + (screenOption*4)} speed={0} />
+          <Contact offset={contactOffset} speed={0} />
 
           <ImagesLayer />
         </ParallaxContainer>

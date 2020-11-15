@@ -1,19 +1,14 @@
-import { useReducer, createContext, useContext } from 'react'
-import { config } from '../config'
-import useWindowSize from '../hooks/useWindowSize'
-import { arraysDiff } from '../utils'
-import { initialState } from './skillSizingObject'
+import { useReducer } from 'react'
+import { config } from '../../config'
+import useWindowSize from '../useWindowSize'
+import { arraysDiff } from '../../utils'
+import { initialState } from './initialObjects/skillSizingObject'
 
-const sizingsContext = createContext({})
-
-export const useSkillSizing = () => useContext(sizingsContext)
-
-export const SizingsProvider = ({children}) => {
-  const { lines, multiplier } = config.skillsViewComputing
+export const useSkillSizing = () => {
+  const { lines, multiplier } = config.sizesInitComputing
   const { windowType } = useWindowSize()
 
   let screenOption = windowType === 'smallPhone' ? 0.02 : 0
-  
 
   const reducer = (state, nodes) => {
     let newState = JSON.parse(JSON.stringify(state))
@@ -24,7 +19,8 @@ export const SizingsProvider = ({children}) => {
       collapsedLines += lines[node]
     })
 
-    let factor = (multiplier - screenOption) * collapsedLines
+    // let factor = (multiplier - screenOption) * collapsedLines
+    let factor = multiplier  * collapsedLines
     factor.toFixed(2)
 
     const action =
@@ -32,10 +28,9 @@ export const SizingsProvider = ({children}) => {
     newState.activeView = [...nodes]
 
     switch (action) {
+
       case 'increase':
-        newState.projectsOffset += factor
-        newState.contactOffset += factor
-        newState.pages += factor
+        newState.resize = parseFloat(factor.toFixed(2))
         return newState
 
       case 'decrease':
@@ -48,10 +43,7 @@ export const SizingsProvider = ({children}) => {
           factor.toFixed(2)
           newState.activeView = []
         }
-
-        newState.projectsOffset -= factor
-        newState.contactOffset -= factor
-        newState.pages -= factor
+        newState.resize = -parseFloat(factor.toFixed(2))
         return newState
 
       default:
@@ -61,14 +53,5 @@ export const SizingsProvider = ({children}) => {
 
   const [skillSizing, setSkillSizing] = useReducer(reducer, initialState)
 
-  return (
-    <sizingsContext.Provider
-      value={{
-        skillSizing,
-        setSkillSizing,
-      }}
-    >
-      {children}
-    </sizingsContext.Provider>
-  )
+  return [ skillSizing, setSkillSizing ]
 }

@@ -2,23 +2,26 @@ import { theme } from '../styles/theme'
 
 export const config = {
 
-  skillsViewComputing:{
+  sizesInitComputing:{
+
+    // ----- Skills Sizing -----
     /**
      * lines represent how many lines contain each expendable item.
      */
     lines: [null, 0, 6, 6, 9, 6, 1, 1, 3],
-
     multiplier: 0.05,
 
-    /**
-     * we have to change those values to make room for skills section
-     */
-    pagesInitialValue: 7.2,
-    projectsInitialOffset: 4.9,
-    contactInitialOffset: 6.2,
+    // ----- Sections Initial values -----
+    pagesInitValue: 7.2,
+    homeInitOffset: 0,
+    aboutInitOffset: 1,
+    experienceInitOffset: 100,
+    skillsInitOffset: 4.3,
+    projectsInitOffset: 4.9,
+    contactInitOffset: 6.2,
   },
 
-
+  // ----- Content & SEO relatives -----
   siteTitle: 'Aymeric Basset | Portfolio', // Navigation and Site Title
   siteTitleAlt: 'Aymeric Basset', // Title short version for manifest
   siteUrl: 'https://aymericbasset.github.io/', // Url of your site. No trailing slash!
@@ -26,7 +29,7 @@ export const config = {
   siteLogo: 'logo.png', // Used for SEO and manifest
   siteLogoAlt: 'Logo Aymeric Basset',
   siteIcon: 'src/assets/images/icon.png',
-  siteDescription: ``, // 300 characters max
+  siteDescription: `Aymeric Basset's portfolio website.`, // 300 characters max
   siteAuthor: 'Aymeric Basset',
   siteLang: 'en',
   meta: [],
