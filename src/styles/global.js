@@ -6,6 +6,8 @@ import { createGlobalStyle } from 'styled-components'
 export const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
+
+    /* Parallax API use important amount of memory otherwise */
     will-change: unset !important;
   }
 

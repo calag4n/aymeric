@@ -1,13 +1,14 @@
+import React, { Suspense, useEffect, useState } from 'react'
 import ReactDOM from 'react-dom'
 import styled from 'styled-components'
 import { ThemeProvider } from 'styled-components'
 import { StylesProvider } from '@material-ui/core/styles'
 
-import Skills from './components/Skills'
-import About from './components/About'
-import Projects from './components/Projects'
+// import Skills from './components/Skills'
+// import About from './components/About'
+// import Projects from './components/Projects'
 import Experience from './components/Experience'
-import Contact from './components/Contact'
+// import Contact from './components/Contact'
 import { GlobalStyle } from './styles/global'
 import { theme } from './styles/theme'
 
@@ -18,8 +19,12 @@ import ImagesLayer from './components/parallax.js/ImagesLayer'
 import { SizingsProvider } from './contexts/sectionsSizingContext'
 import useWindowSize from './hooks/useWindowSize'
 import { useSectionsSizing } from './contexts/sectionsSizingContext'
-import { useEffect, useState } from 'react'
 import { log } from './utils/log'
+const Skills = React.lazy(() => import('./components/Skills'))
+const About = React.lazy(() => import('./components/About'))
+const Projects = React.lazy(() => import('./components/Projects'))
+const Contact = React.lazy(() => import('./components/Contact'))
+// const Experience = React.lazy(() => import('./components/Experience'))
 
 /**
  * The App root component
@@ -48,26 +53,35 @@ const App = () => {
       <SEO />
       <GlobalStyle />
 
-      <ParallaxContainer pages={pagesValue || 7} style={{willChange: 'unset'}}>
+      <ParallaxContainer
+        pages={pagesValue || 7}
+        style={{ willChange: 'unset' }}
+      >
         <Home offset={homeOffset} speed={0.1} />
 
         <Main role="main">
-          <About offset={aboutOffset} speed={0.1} />
-
-          <Experience offset={experienceOffset} speed={0.2} />
-
-          <Skills
-            offset={skillsOffset}
-            speed={0.3}
-            layerStyle={{
-              alignItems: 'flex-start',
-            }}
-          />
-
-          <Projects offset={projectsOffset} speed={-0.1} />
-
-          <Contact offset={contactOffset} speed={0} />
-        <ImagesLayer />
+          <Suspense fallback={<span hidden>.</span>}>
+            <About offset={aboutOffset} speed={0.1} />
+          </Suspense>
+          {/* <Suspense fallback={<span>Loading...</span>}> */}
+            <Experience offset={experienceOffset} speed={0.2} />
+          {/* </Suspense> */}
+          <Suspense fallback={<span hidden>.</span>}>
+            <Skills
+              offset={skillsOffset}
+              speed={0.3}
+              layerStyle={{
+                alignItems: 'flex-start',
+              }}
+            />
+          </Suspense>
+          <Suspense fallback={<span hidden>.</span>}>
+            <Projects offset={projectsOffset} speed={-0.1} />
+          </Suspense>
+          <Suspense fallback={<span hidden>.</span>}>
+            <Contact offset={contactOffset} speed={0} />
+          </Suspense>
+          <ImagesLayer />
         </Main>
       </ParallaxContainer>
     </>

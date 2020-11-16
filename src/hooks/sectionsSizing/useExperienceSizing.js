@@ -29,7 +29,7 @@ export const useExperienceSizing = () => {
       setExperienceSizing(_xpSizes)
       
     })
-  }, [experienceSizing])
+  }, [document, experienceSizing])
 
  return [experienceSizing, setExperienceSizing]
   
