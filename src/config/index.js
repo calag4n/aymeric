@@ -15,7 +15,7 @@ export const config = {
     pagesInitValue: 7.2,
     homeInitOffset: 0,
     aboutInitOffset: 1,
-    experienceInitOffset: 100,
+    experienceInitOffset: 3,
     skillsInitOffset: 4.3,
     projectsInitOffset: 4.9,
     contactInitOffset: 6.2,

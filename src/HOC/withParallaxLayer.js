@@ -19,6 +19,7 @@ const withParallaxLayer = Component => ({offset,  speed, factor, layerStyle, ...
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
+        willChange: 'unset',
         ...layerStyle
       }}
     >

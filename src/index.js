@@ -48,10 +48,10 @@ const App = () => {
       <SEO />
       <GlobalStyle />
 
-      <Main role="main">
-        <ParallaxContainer pages={pagesValue || 7}>
-          <Home offset={homeOffset} speed={0.1} />
+      <ParallaxContainer pages={pagesValue || 7} style={{willChange: 'unset'}}>
+        <Home offset={homeOffset} speed={0.1} />
 
+        <Main role="main">
           <About offset={aboutOffset} speed={0.1} />
 
           <Experience offset={experienceOffset} speed={0.2} />
@@ -67,10 +67,9 @@ const App = () => {
           <Projects offset={projectsOffset} speed={-0.1} />
 
           <Contact offset={contactOffset} speed={0} />
-
-          <ImagesLayer />
-        </ParallaxContainer>
-      </Main>
+        <ImagesLayer />
+        </Main>
+      </ParallaxContainer>
     </>
   )
 }

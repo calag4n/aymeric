@@ -10,9 +10,11 @@ export const theme = {
     primary: '#EB0053',
     secondary: 'rgb(33, 150, 243)',
     white: '#fff',
+    greyMedium: '#707070',
 
     title: '#fff',
     text: '#fff',
+    subtext: '#707070',
   },
 
   fonts: {

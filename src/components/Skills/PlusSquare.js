@@ -1,4 +1,3 @@
-//@ts-check
 import { SvgIcon } from '@material-ui/core'
 import { useAppTheme } from '../../styles/theme'
 

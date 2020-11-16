@@ -6,6 +6,7 @@ import { createGlobalStyle } from 'styled-components'
 export const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
+    will-change: unset !important;
   }
 
   html{

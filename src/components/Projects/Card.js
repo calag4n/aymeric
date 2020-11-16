@@ -1,4 +1,3 @@
-//@ts-check
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import MuiCard from '@material-ui/core/Card'
@@ -34,7 +33,7 @@ const Card = ({ tech, title, kind, description, link }) => {
     <StyledCard variant="outlined">
       <article>
         <CardContent>
-          <Tech color="textSecondary" gutterBottom>
+          <Tech gutterBottom>
             {tech}
           </Tech>
 
@@ -42,7 +41,7 @@ const Card = ({ tech, title, kind, description, link }) => {
             {title}
           </Typography>
 
-          <Kind color="textSecondary">{kind}</Kind>
+          <Kind>{kind}</Kind>
 
           <Typography variant="body2" component="div">
             <ReactMarkdown>{description}</ReactMarkdown>
@@ -75,10 +74,12 @@ const StyledCard = styled(MuiCard)`
 
 const Tech = styled(Typography)`
   font-size: 14px;
+  color: ${({ theme }) => theme.colors.subtext};
 `
 
 const Kind = styled(Typography)`
   margin-bottom: 12px;
+  color: ${({ theme }) => theme.colors.subtext};
 `
 
 const Button = styled(MuiButton)`
