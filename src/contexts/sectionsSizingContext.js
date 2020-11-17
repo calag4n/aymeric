@@ -4,6 +4,7 @@ import useWindowSize from '../hooks/useWindowSize'
 import { useSkillSizing } from '../hooks/sectionsSizing/useSkillSizing'
 import { useExperienceSizing } from '../hooks/sectionsSizing/useExperienceSizing'
 import { initialState } from './sectionsSizingObject'
+import { useProjectsSizing } from '../hooks/sectionsSizing/useProjectsSizing'
 
 const sizingsContext = createContext({})
 
@@ -14,6 +15,7 @@ export const SizingsProvider = ({children}) => {
   const { windowType } = useWindowSize()
   const [ skillSizing, setSkillSizing ] = useSkillSizing()
   const [ experienceSizing, setExperienceSizing ] = useExperienceSizing()
+  const [ projectsSizing, setProjectsSizing ] = useProjectsSizing()
   
 
   const reducer = (state, payload) => {
@@ -22,11 +24,16 @@ export const SizingsProvider = ({children}) => {
 
     switch (action) {
       case 'init':
+        const projectsAdd = value?.projectsAdd || 0
+        const contactAdd = value?.contactAdd || 0
+
         _state.experienceOffset = experienceSizing.selfOffset 
         _state.skillsOffset = experienceSizing.skillsOffset 
+        console.log(projectsAdd)
+        console.log(contactAdd)
         _state.projectsOffset = experienceSizing.projectsOffset 
         _state.contactOffset = experienceSizing.contactOffset 
-        _state.pagesValue = experienceSizing.pagesValue 
+        _state.pagesValue = _state.contactOffset + 1
         
         console.log(_state)
         return _state

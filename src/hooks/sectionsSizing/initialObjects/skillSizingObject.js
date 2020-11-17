@@ -1,5 +1,3 @@
-import { config } from "../../../config"
-
 /**
  * useSkillSizing's initial object
  */

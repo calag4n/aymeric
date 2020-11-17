@@ -17,12 +17,11 @@ import { useExperienceSizing } from '../../hooks/sectionsSizing/useExperienceSiz
  * <Experience />
  */
 const Experience = () => {
-  const xp = useExperienceSizing()
   return (
     <section>
       <H1>My Background</H1>
 
-      <VerticalTimeline>
+      <VerticalTimeline className='experience-section'>
         {experiences.map((exp, i) => {
           const {
             contentStyle,

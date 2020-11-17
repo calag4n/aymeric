@@ -12,8 +12,8 @@ export const useExperienceSizing = () => {
 
   useEffect(() => {
     document.addEventListener('DOMContentLoaded', () => {
-      const element = document.querySelector('.vertical-timeline')
-      const height = element.offsetHeight
+      const section = document.querySelector('.experience-section')
+      const height = section.offsetHeight
       const _xpSizes = JSON.parse(JSON.stringify(experienceSizing))
 
       _xpSizes.selfOffset = parseFloat(((height / 70) * 0.1).toFixed(2))
@@ -29,7 +29,7 @@ export const useExperienceSizing = () => {
       setExperienceSizing(_xpSizes)
       
     })
-  }, [document, experienceSizing])
+  }, [experienceSizing])
 
  return [experienceSizing, setExperienceSizing]
   

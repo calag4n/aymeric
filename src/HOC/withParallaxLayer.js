@@ -5,11 +5,11 @@ import { ParallaxLayer } from 'react-spring/renderprops-addons'
  * High Order Component wich add a Parent ParallaxLayer Component
  * 
  * @component
- * @param {JSX.Element} Component
+ * @param {JSX.Element} WrappedComponent
  * @example
  * withParallaxLayer(SectionComponent)
  */
-const withParallaxLayer = Component => ({offset,  speed, factor, layerStyle, ...props }) => {
+const withParallaxLayer = WrappedComponent => ({offset,  speed, factor, layerStyle, ...props }) => {
   return (
     <ParallaxLayer
       offset={offset}
@@ -23,13 +23,13 @@ const withParallaxLayer = Component => ({offset,  speed, factor, layerStyle, ...
         ...layerStyle
       }}
     >
-      <Component {...props}/>
+      <WrappedComponent {...props}/>
     </ParallaxLayer>
   )
 }
 
 withParallaxLayer.propTypes = {
-  Component: PropTypes.element.isRequired,
+  WrappedComponent: PropTypes.element.isRequired,
 }
 
 export default withParallaxLayer

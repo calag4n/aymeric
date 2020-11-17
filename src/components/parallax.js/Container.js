@@ -1,12 +1,11 @@
 import PropTypes from 'prop-types'
+import { useState } from 'react'
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
-import { getSvgUrl } from '../../utils'
-import stars from '../../images/stars.svg'
-
+import styled from 'styled-components'
 
 /**
  * The Parallax Container sets the page
- * 
+ *
  * @component
  * @param {{
  *   pages: number,
@@ -18,21 +17,14 @@ import stars from '../../images/stars.svg'
  *   <Layer />
  * </Container>
  */
-const Container = ({pages, children}) => {
+const Container = ({ pages, children }) => {
+
+  const [starsFactor] = useState(pages - 1) 
+
   return (
     <Parallax pages={pages} style={{ right: 0, left: 0, top: 0, bottom: 0 }}>
-      <ParallaxLayer
-        offset={0}
-        speed={0}
-        factor={6}
-        style={{
-          // backgroundImage: getSvgUrl('stars', true),
-          backgroundImage: 'url(./assets/images/stars.svg)',
-          backgroundSize: 'cover',
-          transition: 'background-image 4s ease-in-out',
-        }}
-      />
-      {children} 
+      <Layer offset={0} speed={0} factor={starsFactor} />
+      {children}
     </Parallax>
   )
 }
@@ -46,3 +38,18 @@ Container.propTypes = {
 }
 
 export default Container
+
+const Layer = styled(ParallaxLayer)`
+  animation: open 4s;
+  background-image: url('./assets/images/stars.svg');
+  background-size: cover !important;
+
+  @keyframes open {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+`
