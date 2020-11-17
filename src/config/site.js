@@ -2,25 +2,6 @@ import { theme } from '../styles/theme'
 
 export const config = {
 
-  sizesInitComputing:{
-
-    // ----- Skills Sizing -----
-    /**
-     * lines represent how many lines contain each expendable item.
-     */
-    lines: [null, 0, 6, 6, 9, 6, 1, 1, 3],
-    multiplier: 0.05,
-
-    // ----- Sections Initial values -----
-    pagesInitValue: 7.2,
-    homeInitOffset: 0,
-    aboutInitOffset: 1,
-    experienceInitOffset: 3,
-    skillsInitOffset: 4.3,
-    projectsInitOffset: 4.9,
-    contactInitOffset: 6.2,
-  },
-
   // ----- Content & SEO relatives -----
   siteTitle: 'Aymeric Basset | Portfolio', // Navigation and Site Title
   siteTitleAlt: 'Aymeric Basset', // Title short version for manifest
@@ -38,7 +19,7 @@ export const config = {
   themeColor: theme.colors.primary,
   backgroundColor: theme.colors.bg,
 
-  // FB & Twitter cards
+  // ----- FB & Twitter cards -----
   userTwitter: '', // Twitter Username '@yourtwittername'
   siteFBAppID: '', // Facebook App ID
   ogLanguage: 'en_EN', // Facebook Language 'fr_FR'

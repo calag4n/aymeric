@@ -99,105 +99,66 @@ Coursework includes core scientific training in:
   {
     contentStyle: {},
     contentArrowStyle: {},
-    date: '2017 - 2021',
+    date: '2014 - 2017',
     iconStyle: {background: theme.colors.primary, color: theme.colors.white },
     Icon: SchoolIcon,
-    title: 'Msc Computer Science',
-    subtitle: 'Ensta Paris',
-    imageLink: 'https://www.ensta-paristech.fr/en/home',
-    image: ensta,
-    imageAlt: 'ENSTA logo',
+    title: 'Classe Préparatoire Aux Grandes Écoles',
+    subtitle: 'Champollion, Grenoble',
+    imageLink: 'https://en.wikipedia.org/wiki/Classe_pr%C3%A9paratoire_aux_grandes_%C3%A9coles',
+    image: champo,
+    imageAlt: 'Champollion logo',
     description: `
-ENSTA Paris belongs to the **foremost graduate schools of engineering** in France called *"Grandes Ecoles"* and awards the french *"Diplôme d'Ingénieur"*.
+2 years of very demanding scientific courses with prior selection before competing in nationwide exams to enter **Top French Graduate Schools of Engineering**.
+    
+Ranked 303 (**top 5%** overall)`,
+  },
+  {
+    contentStyle: {},
+    contentArrowStyle: {},
+    date: '2014 - 2017',
+    iconStyle: {background: theme.colors.primary, color: theme.colors.white },
+    Icon: SchoolIcon,
+    title: 'Classe Préparatoire Aux Grandes Écoles',
+    subtitle: 'Champollion, Grenoble',
+    imageLink: 'https://en.wikipedia.org/wiki/Classe_pr%C3%A9paratoire_aux_grandes_%C3%A9coles',
+    image: champo,
+    imageAlt: 'Champollion logo',
+    description: `
+2 years of very demanding scientific courses with prior selection before competing in nationwide exams to enter **Top French Graduate Schools of Engineering**.
+    
+Ranked 303 (**top 5%** overall)`,
+  },
+  {
+    contentStyle: {},
+    contentArrowStyle: {},
+    date: '2014 - 2017',
+    iconStyle: {background: theme.colors.primary, color: theme.colors.white },
+    Icon: SchoolIcon,
+    title: 'Classe Préparatoire Aux Grandes Écoles',
+    subtitle: 'Champollion, Grenoble',
+    imageLink: 'https://en.wikipedia.org/wiki/Classe_pr%C3%A9paratoire_aux_grandes_%C3%A9coles',
+    image: champo,
+    imageAlt: 'Champollion logo',
+    description: `
+2 years of very demanding scientific courses with prior selection before competing in nationwide exams to enter **Top French Graduate Schools of Engineering**.
+    
+Ranked 303 (**top 5%** overall)`,
+  },
+  {
+    contentStyle: {},
+    contentArrowStyle: {},
+    date: '2014 - 2017',
+    iconStyle: {background: theme.colors.primary, color: theme.colors.white },
+    Icon: SchoolIcon,
+    title: 'Classe Préparatoire Aux Grandes Écoles',
+    subtitle: 'Champollion, Grenoble',
+    imageLink: 'https://en.wikipedia.org/wiki/Classe_pr%C3%A9paratoire_aux_grandes_%C3%A9coles',
+    image: champo,
+    imageAlt: 'Champollion logo',
+    description: `
+2 years of very demanding scientific courses with prior selection before competing in nationwide exams to enter **Top French Graduate Schools of Engineering**.
+    
+Ranked 303 (**top 5%** overall)`,
+  },
 
-Coursework includes core scientific training in:
-- **Mechanics** (Solid, Fluid, Quantum)
-- **Mathematics** (Statistics & Probability, Calculus, Geometry)
-- **Computer Sciences** (Signal Processing, Software Engineering, Databases, Parallel Programming)
-- **Biology** (introduction to Genetic and Immunology)`,
-  },
-  {
-    contentStyle: {},
-    contentArrowStyle: {},
-    date: '2014 - 2017',
-    iconStyle: {background: theme.colors.primary, color: theme.colors.white },
-    Icon: SchoolIcon,
-    title: 'Classe Préparatoire Aux Grandes Écoles',
-    subtitle: 'Champollion, Grenoble',
-    imageLink: 'https://en.wikipedia.org/wiki/Classe_pr%C3%A9paratoire_aux_grandes_%C3%A9coles',
-    image: champo,
-    imageAlt: 'Champollion logo',
-    description: `
-2 years of very demanding scientific courses with prior selection before competing in nationwide exams to enter **Top French Graduate Schools of Engineering**.
-    
-Ranked 303 (**top 5%** overall)`,
-  },
-  {
-    contentStyle: {},
-    contentArrowStyle: {},
-    date: '2014 - 2017',
-    iconStyle: {background: theme.colors.primary, color: theme.colors.white },
-    Icon: SchoolIcon,
-    title: 'Classe Préparatoire Aux Grandes Écoles',
-    subtitle: 'Champollion, Grenoble',
-    imageLink: 'https://en.wikipedia.org/wiki/Classe_pr%C3%A9paratoire_aux_grandes_%C3%A9coles',
-    image: champo,
-    imageAlt: 'Champollion logo',
-    description: `
-2 years of very demanding scientific courses with prior selection before competing in nationwide exams to enter **Top French Graduate Schools of Engineering**.
-    
-Ranked 303 (**top 5%** overall)`,
-  },
-  {
-    contentStyle: {},
-    contentArrowStyle: {},
-    date: '2017 - 2021',
-    iconStyle: {background: theme.colors.primary, color: theme.colors.white },
-    Icon: SchoolIcon,
-    title: 'Msc Computer Science',
-    subtitle: 'Ensta Paris',
-    imageLink: 'https://www.ensta-paristech.fr/en/home',
-    image: ensta,
-    imageAlt: 'ENSTA logo',
-    description: `
-ENSTA Paris belongs to the **foremost graduate schools of engineering** in France called *"Grandes Ecoles"* and awards the french *"Diplôme d'Ingénieur"*.
-
-Coursework includes core scientific training in:
-- **Mechanics** (Solid, Fluid, Quantum)
-- **Mathematics** (Statistics & Probability, Calculus, Geometry)
-- **Computer Sciences** (Signal Processing, Software Engineering, Databases, Parallel Programming)
-- **Biology** (introduction to Genetic and Immunology)`,
-  },
-  {
-    contentStyle: {},
-    contentArrowStyle: {},
-    date: '2014 - 2017',
-    iconStyle: {background: theme.colors.primary, color: theme.colors.white },
-    Icon: SchoolIcon,
-    title: 'Classe Préparatoire Aux Grandes Écoles',
-    subtitle: 'Champollion, Grenoble',
-    imageLink: 'https://en.wikipedia.org/wiki/Classe_pr%C3%A9paratoire_aux_grandes_%C3%A9coles',
-    image: champo,
-    imageAlt: 'Champollion logo',
-    description: `
-2 years of very demanding scientific courses with prior selection before competing in nationwide exams to enter **Top French Graduate Schools of Engineering**.
-    
-Ranked 303 (**top 5%** overall)`,
-  },
-  {
-    contentStyle: {},
-    contentArrowStyle: {},
-    date: '2014 - 2017',
-    iconStyle: {background: theme.colors.primary, color: theme.colors.white },
-    Icon: SchoolIcon,
-    title: 'Classe Préparatoire Aux Grandes Écoles',
-    subtitle: 'Champollion, Grenoble',
-    imageLink: 'https://en.wikipedia.org/wiki/Classe_pr%C3%A9paratoire_aux_grandes_%C3%A9coles',
-    image: champo,
-    imageAlt: 'Champollion logo',
-    description: `
-2 years of very demanding scientific courses with prior selection before competing in nationwide exams to enter **Top French Graduate Schools of Engineering**.
-    
-Ranked 303 (**top 5%** overall)`,
-  },
 ]

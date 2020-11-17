@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
-import { config } from '../config'
+import { config } from '../config/site'
 
 /**
  * Inject data in <head> for SEO purpose

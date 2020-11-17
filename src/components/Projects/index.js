@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import Card from './Card'
 import { projects } from '../../content/projects'
 import withParallaxLayer from '../../HOC/withParallaxLayer'
-import { useProjectsSizing } from '../../hooks/sectionsSizing/useProjectsSizing'
 
 /**
  * Projects section
@@ -17,9 +16,8 @@ import { useProjectsSizing } from '../../hooks/sectionsSizing/useProjectsSizing'
  * </Projects>
  */
 const Projects = () => {
-  const [ projectsSizing, setProjectsSizing ] = useProjectsSizing()
   return (
-    <section className='projects-section'>
+    <section>
       <H1>My Projects</H1>
 
       <Grid container spacing={4} justify="center">

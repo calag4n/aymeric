@@ -1,10 +1,8 @@
 import { useReducer, createContext, useContext, useState, useEffect } from 'react'
-import { config } from '../config'
 import useWindowSize from '../hooks/useWindowSize'
-import { useSkillSizing } from '../hooks/sectionsSizing/useSkillSizing'
-import { useExperienceSizing } from '../hooks/sectionsSizing/useExperienceSizing'
+import { useSkillSizing } from '../hooks/useSkillSizing'
 import { initialState } from './sectionsSizingObject'
-import { useProjectsSizing } from '../hooks/sectionsSizing/useProjectsSizing'
+import { toFixed } from '../utils'
 
 const sizingsContext = createContext({})
 
@@ -14,42 +12,38 @@ export const SizingsProvider = ({children}) => {
 
   const { windowType } = useWindowSize()
   const [ skillSizing, setSkillSizing ] = useSkillSizing()
-  const [ experienceSizing, setExperienceSizing ] = useExperienceSizing()
-  const [ projectsSizing, setProjectsSizing ] = useProjectsSizing()
+  
+
+  console.log(initialState)
   
 
   const reducer = (state, payload) => {
     const _state = JSON.parse(JSON.stringify(state))
     const { action, value } = payload
+    let fixed = {}
 
     switch (action) {
       case 'init':
-        const projectsAdd = value?.projectsAdd || 0
-        const contactAdd = value?.contactAdd || 0
-
-        _state.experienceOffset = experienceSizing.selfOffset 
-        _state.skillsOffset = experienceSizing.skillsOffset 
-        console.log(projectsAdd)
-        console.log(contactAdd)
-        _state.projectsOffset = experienceSizing.projectsOffset 
-        _state.contactOffset = experienceSizing.contactOffset 
+        _state.experienceOffset *= value
+        _state.skillsOffset *= value      
+        _state.projectsOffset *= value * 1.06
+        _state.contactOffset *= value * 1.1
         _state.pagesValue = _state.contactOffset + 1
-        
+        _state.starsFactor = _state.contactOffset
+
+        fixed = toFixed(_state, 2)
         console.log(_state)
-        return _state
+        return fixed
 
       case 'toggleSkills':
         setSkillSizing(value)
-        console.log(skillSizing.resize)
         _state.pagesValue += skillSizing.resize
         _state.projectsOffset += skillSizing.resize 
         _state.contactOffset += skillSizing.resize
 
-        for (const key in _state) {
-            _state[key] = parseFloat(_state[key].toFixed(2))        
-        }
+        fixed = toFixed(_state, 2)
         console.log(_state)
-        return _state
+        return fixed
     
       default:
         break;
@@ -57,12 +51,12 @@ export const SizingsProvider = ({children}) => {
   }
   
   const [sizes, setSizes] = useReducer(reducer, initialState)
-  let screenOption = windowType === 'smallPhone' ? 0.02 : 0
   
-  useEffect(() => {
-    setSizes({action: 'init', value: null})
-  }, [experienceSizing])
 
+  useEffect(() => {
+    const screenOption = windowType === 'smallPhone' ? 1.2 : 1
+    setSizes({action: 'init', value: screenOption })
+  }, [windowType])
 
   return (
     <sizingsContext.Provider

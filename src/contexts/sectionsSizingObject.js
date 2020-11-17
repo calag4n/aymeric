@@ -1,14 +1,30 @@
-import { config } from "../config"
+import { config } from '../config/sizes'
 
 /**
  * sizingsContext's initial object
  */
-export const initialState = {
-  pagesValue: config.sizesInitComputing.pagesInitValue,
-  homeOffset: config.sizesInitComputing.homeInitOffset,
-  aboutOffset: config.sizesInitComputing.aboutInitOffset,
-  experienceOffset: config.sizesInitComputing.experienceInitOffset,
-  skillsOffset: config.sizesInitComputing.skillsInitOffset,
-  projectsOffset: config.sizesInitComputing.projectsInitOffset,
-  contactOffset: config.sizesInitComputing.contactInitOffset,
+const state = () => {
+  const {
+    pagesValue,
+    homeOffset,
+    aboutOffset,
+    experienceOffset,
+    skillsOffset,
+    projectsOffset,
+    contactOffset,
+    starsFactor,
+  } = config
+
+  return {
+    pagesValue: pagesValue || contactOffset + 1,
+    homeOffset,
+    aboutOffset,
+    experienceOffset,
+    skillsOffset,
+    projectsOffset,
+    contactOffset,
+    starsFactor: starsFactor || contactOffset,
+  }
 }
+
+export const initialState = state()

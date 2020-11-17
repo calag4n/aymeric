@@ -1,11 +1,10 @@
 import { useReducer } from 'react'
-import { config } from '../../config'
-import useWindowSize from '../useWindowSize'
-import { arraysDiff } from '../../utils'
-import { initialState } from './initialObjects/skillSizingObject'
+import { config } from '../config/sizes'
+import useWindowSize from './useWindowSize'
+import { arraysDiff } from '../utils'
 
 export const useSkillSizing = () => {
-  const { lines, multiplier } = config.sizesInitComputing
+  const { lines, multiplier } = config
   const { windowType } = useWindowSize()
 
   let screenOption = windowType === 'smallPhone' ? 0.02 : 0
@@ -49,6 +48,11 @@ export const useSkillSizing = () => {
       default:
         break
     }
+  }
+
+  const initialState = {
+    activeView: [],
+    resize: 0,
   }
 
   const [skillSizing, setSkillSizing] = useReducer(reducer, initialState)

@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
 import styled from 'styled-components'
+import { useSectionsSizing } from '../../contexts/sectionsSizingContext'
 
 /**
  * The Parallax Container sets the page
@@ -18,8 +19,9 @@ import styled from 'styled-components'
  * </Container>
  */
 const Container = ({ pages, children }) => {
-
-  const [starsFactor] = useState(pages - 1) 
+  const {
+    sizes: { starsFactor },
+  } = useSectionsSizing()
 
   return (
     <Parallax pages={pages} style={{ right: 0, left: 0, top: 0, bottom: 0 }}>
