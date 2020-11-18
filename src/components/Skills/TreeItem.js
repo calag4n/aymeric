@@ -37,7 +37,7 @@ const StyledTreeItem = styled(MuiTreeItem)`
   }
 
   & .MuiTreeItem-label {
-    font-size: ${({ theme }) => theme.fonts.size.treeView};
+    font-size: ${({ theme }) => theme.fonts.size.treeView.items};
     &:hover {
       background-color: transparent;
     }

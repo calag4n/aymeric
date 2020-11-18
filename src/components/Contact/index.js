@@ -16,17 +16,26 @@ const Contact = () => {
       <Button
         variant="contained"
         href="https://www.linkedin.com/in/aymeric-basset/"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         Linkedin
       </Button>
       <Button
         variant="contained"
-        href="./Aymeric_Basset_resume.pdf"
-        download="aymeric_basset_resume"
+        href="./assets/Aymeric_Basset_resume.pdf"
+        download="aymeric_basset_resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         Resume
       </Button>
-      <Button variant="contained" href="https://github.com/AymericBasset">
+      <Button
+        variant="contained"
+        href="https://github.com/AymericBasset"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Github
       </Button>
     </Section>

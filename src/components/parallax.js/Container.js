@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types'
-import { useEffect, useState } from 'react'
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
 import styled from 'styled-components'
 import { useSectionsSizing } from '../../contexts/sectionsSizingContext'

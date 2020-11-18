@@ -4,15 +4,18 @@ import { config } from '../config/sizes'
  * sizingsContext's initial object
  */
 const state = () => {
+
   const {
-    pagesValue,
-    homeOffset,
-    aboutOffset,
-    experienceOffset,
-    skillsOffset,
-    projectsOffset,
-    contactOffset,
-    starsFactor,
+    desktop: {
+      pagesValue,
+      homeOffset,
+      aboutOffset,
+      experienceOffset,
+      skillsOffset,
+      projectsOffset,
+      contactOffset,
+      starsFactor,
+    },
   } = config
 
   return {

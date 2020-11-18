@@ -5,7 +5,7 @@ export const config = {
   // ----- Content & SEO relatives -----
   siteTitle: 'Aymeric Basset | Portfolio', // Navigation and Site Title
   siteTitleAlt: 'Aymeric Basset', // Title short version for manifest
-  siteUrl: 'https://aymericbasset.github.io/', // Url of your site. No trailing slash!
+  siteUrl: 'https://aymericbasset.github.io', // Url of your site. No trailing slash!
   siteLanguage: 'en-EN', // Language Tag on <html> element
   siteLogo: 'logo.png', // Used for SEO and manifest
   siteLogoAlt: 'Logo Aymeric Basset',
@@ -20,9 +20,9 @@ export const config = {
   backgroundColor: theme.colors.bg,
 
   // ----- FB & Twitter cards -----
-  userTwitter: '', // Twitter Username '@yourtwittername'
+  userTwitter: '', // Twitter Username - '@yourtwittername'
   siteFBAppID: '', // Facebook App ID
-  ogLanguage: 'en_EN', // Facebook Language 'fr_FR'
+  ogLanguage: 'en_EN', // Facebook Language - 'fr_FR'
   siteImageUrl: '', // Provide an image when shared in FB & Twitter
 
   makeTwitterCard: function (description, title, imageUrl) {

@@ -73,7 +73,7 @@ const App = () => {
 
           <Projects offset={projectsOffset} speed={-0.1} />
 
-          <Contact offset={contactOffset} speed={0} />
+          <Contact offset={contactOffset} speed={0.1} />
 
           <ImagesLayer />
         </Main>

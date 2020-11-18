@@ -34,7 +34,10 @@ export const theme = {
       homeTitle: 'clamp(16px, 7vw, 80px)',
       homeSubtitle: 'clamp(14px, 3.2vw, 50px)',
       sectionTitle: '2em',
-      treeView: 'clamp(15px, 3.5vw, 30px)',
+      treeView: {
+        title: 'clamp(1.5em, 3.9vw, 30px)',
+        items: 'clamp(1.2em, 3.8vw, 30px)',
+      },
     },
   },
 
@@ -48,7 +51,7 @@ export const theme = {
     homeSubtitle: {
       smallPhone: 40,
       bigPhone: 60,
-      tabet: 80,
+      tablet: 80,
       desktop: 120,
     },
     sectionPadding: '40px',

@@ -35,7 +35,7 @@ const Skills = () => {
    * @returns JSX.Element | JSX.Element[]
    */
   const renderTree = ({ id, name, children }) => (
-    <TreeItem key={id} nodeId={id} label={name}>
+    <TreeItem key={id} nodeId={id} label={name} className={id === '1' ? 'Treeview-title' : '' }>
       {Array.isArray(children) ? children.map(node => renderTree(node)) : null}
     </TreeItem>
   )
@@ -69,17 +69,16 @@ const Section = styled.section`
 
   transition: width .2s ease-in-out;
   }
-  /* min-width: 600px; */
 
-  /* @media ${device.smallPhone}{
-    padding-top: 0;
+  & > ul > li > .MuiTreeItem-content > .MuiTreeItem-label{
+    font-size: ${({ theme }) => theme.fonts.size.treeView.title};
+  }
 
-  } */
 `
 
 const TreeView = styled(MuiTreeView)`
   margin: auto;
   color: ${({ theme }) => theme.colors.primary};
   flex-grow: 1;
-  /* max-width: 600px; */
+
 `

@@ -3,11 +3,16 @@ import { config } from '../config/sizes'
 import useWindowSize from './useWindowSize'
 import { arraysDiff } from '../utils'
 
+
+/**
+ * Makes a resizing of the sections below Skills and 
+ * the whole page when skills are expand or collapsed
+ */
 export const useSkillSizing = () => {
   const { lines, multiplier } = config
-  const { windowType } = useWindowSize()
+  const { deviceType } = useWindowSize()
 
-  let screenOption = windowType === 'smallPhone' ? 0.02 : 0
+  let screenOption = deviceType === 'smallPhone' ? 0.02 : 0
 
   const reducer = (state, nodes) => {
     let newState = JSON.parse(JSON.stringify(state))
@@ -18,7 +23,6 @@ export const useSkillSizing = () => {
       collapsedLines += lines[node]
     })
 
-    // let factor = (multiplier - screenOption) * collapsedLines
     let factor = multiplier  * collapsedLines
     factor.toFixed(2)
 

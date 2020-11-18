@@ -15,9 +15,9 @@ const Subtitle = () => {
   const [items, setItems] = useState([])
 
   const { colors, fonts, spacings } = useAppTheme()
-  const { windowType } = useWindowSize()
+  const { deviceType } = useWindowSize()
 
-  let margin = spacings.homeSubtitle[windowType]
+  let margin = spacings.homeSubtitle[deviceType]
 
   const transitions = useTransition(items, null, {
     from: {
