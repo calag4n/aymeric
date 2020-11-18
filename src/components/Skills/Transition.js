@@ -28,9 +28,6 @@ const Transition = props => {
 }
 
 Transition.propTypes = {
-  /**
-   * Show the component; triggers the enter or exit states
-   */
   in: PropTypes.bool,
 }
 

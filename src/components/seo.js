@@ -6,14 +6,6 @@ import { config } from '../config/site'
  * Inject data in <head> for SEO purpose
  *
  * @component
- * @param {{
- *   description?: string,
- *   meta?: object[],
- *   title?: string,
- *   imageUrl?: string,
- *   pageUrl?: string,
- * }} props
- *
  * @example
  * <SEO
  *   description='Page description'

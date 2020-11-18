@@ -7,12 +7,8 @@ import { useSectionsSizing } from '../../contexts/sectionsSizingContext'
  * The Parallax Container sets the page
  *
  * @component
- * @param {{
- *   pages: number,
- *   children: JSX.Element[] | JSX.Element,
- * }} props
  * @example
- * <Container>
+ * <Container pages={7}>
  *   <Layer />
  *   <Layer />
  * </Container>

@@ -20,15 +20,15 @@ export const theme = {
   fonts: {
     family: {
       title: `-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-					'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-					sans-serif`,
+          'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+          sans-serif`,
 
       text: `-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-					'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-					sans-serif`,
+          'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+          sans-serif`,
 
       code: `source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-					monospace`,
+          monospace`,
     },
     size: {
       homeTitle: 'clamp(16px, 7vw, 80px)',

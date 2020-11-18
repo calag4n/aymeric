@@ -10,22 +10,14 @@ import ReactMarkdown from 'react-markdown'
 /**
  * Displays a project in a card
  *
- * @param {{
- *   tech?: string,
- *   title: string,
- *   kind?: string,
- *   description: string,
- *   link: string,
- * }} props
- *
  * @component
  * @example
  * <Card
+ *   tech='Python'
  *   title='Awesome title'
- *	 tech='Python'
- *	 kind='ML Engineering'
- *	 description="It's an awesome project !"
- *	 link='https://awesome-project.url'
+ *   kind='ML Engineering'
+ *   description="It's an awesome project !"
+ *   link='https://awesome-project.url'
  * />
  */
 const Card = ({ tech, title, kind, description, link }) => {

@@ -32,6 +32,25 @@ or
 yarn start
 ```
 
+## Documentation
+
+A basic documentation has been made with [jsdoc](https://jsdoc.app/) & [better-docs](https://github.com/SoftwareBrothers/better-docs).
+Its visible at [PUT_URL](https://put.url) and the source is available in `/docs`.
+
+To build it :
+
+```sh
+npm run docs
+```
+
+or
+
+```sh
+yarn docs
+```
+
+Then open `/docs/index.html` in your browser.
+
 ## Author
 
 👤 **Aymeric Basset <aymeric.basset@gmail.com>**

@@ -26,12 +26,7 @@ const Skills = () => {
 
   /**
    * Recursive function that render nested objects in TreeItem components
-   *
-   * @param {{
-   *  id: string,
-   *  name: string,
-   *  children?: object[]
-   * }} node
+   * @param {object} node Contains id, name & children properties.
    * @returns JSX.Element | JSX.Element[]
    */
   const renderTree = ({ id, name, children }) => (

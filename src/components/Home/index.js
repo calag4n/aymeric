@@ -7,10 +7,8 @@ import { device, useAppTheme } from '../../styles/theme'
 
 /**
  * @component
- * @param {{
- *   offset?: number,
- *   speed?: number,
- * }} props
+ * @example
+ * <Home offset={3.2} speed={0.1} />
  */
 const Home = ({ offset, speed }) => {
   const { colors } = useAppTheme()
