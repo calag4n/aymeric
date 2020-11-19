@@ -22,7 +22,7 @@ const Projects = () => {
 
       <Grid container spacing={4} justify="center">
 
-        {projects.map(({ title, tech, kind, description, link }, i) => (
+        {projects.map(({ title, tech, kind, description, link, linkTitle }, i) => (
           <Grid item xs={12} sm={6} md={4} key={`project-${title}-${i}`}>
             <Card
               title={title}
@@ -30,6 +30,7 @@ const Projects = () => {
               kind={kind}
               description={description}
               link={link}
+              linkTitle={linkTitle}
             />
           </Grid>
         ))}

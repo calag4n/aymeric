@@ -18,16 +18,15 @@ import ReactMarkdown from 'react-markdown'
  *   kind='ML Engineering'
  *   description="It's an awesome project !"
  *   link='https://awesome-project.url'
+ *   linkTitle='Project homepage'
  * />
  */
-const Card = ({ tech, title, kind, description, link }) => {
+const Card = ({ tech, title, kind, description, link, linkTitle }) => {
   return (
     <StyledCard variant="outlined">
       <article>
         <CardContent>
-          <Tech gutterBottom>
-            {tech}
-          </Tech>
+          <Tech gutterBottom>{tech}</Tech>
 
           <Typography variant="h5" component="h2">
             {title}
@@ -41,8 +40,14 @@ const Card = ({ tech, title, kind, description, link }) => {
         </CardContent>
 
         <CardActions>
-          <Button variant="outlined" size="small" href={link} target='_blank'>
-            Learn More
+          <Button
+            variant="outlined"
+            size="small"
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {linkTitle}
           </Button>
         </CardActions>
       </article>
@@ -77,5 +82,4 @@ const Kind = styled(Typography)`
 const Button = styled(MuiButton)`
   border: 1px solid ${({ theme }) => theme.colors.primary};
   color: ${({ theme }) => theme.colors.primary};
-  
 `

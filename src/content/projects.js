@@ -10,6 +10,7 @@ The dataset used was based on the *MIMIC* database and composed of 20742 adult p
 Our best model is based on *XGBoost* and has an auroc score of **86.5%** 24 hours before the event.
 A second objective was model explainability and **real-time analysis of the predictions**. `,
     link: 'https://github.com/AymericBasset/Acute_Kidney_Injury_Prediction_In_ICU',
+    linkTitle: `Project page`,
   },
   {
     title: 'Acute Kidney Injury Prediction',
@@ -22,6 +23,7 @@ The dataset used was based on the *MIMIC* database and composed of 20742 adult p
 Our best model is based on *XGBoost* and has an auroc score of **86.5%** 24 hours before the event.
 A second objective was model explainability and **real-time analysis of the predictions**. `,
     link: 'https://github.com/AymericBasset/Acute_Kidney_Injury_Prediction_In_ICU',
+    linkTitle: `Project page`,
   },
   {
     title: 'Acute Kidney Injury Prediction',
@@ -34,6 +36,7 @@ The dataset used was based on the *MIMIC* database and composed of 20742 adult p
 Our best model is based on *XGBoost* and has an auroc score of **86.5%** 24 hours before the event.
 A second objective was model explainability and **real-time analysis of the predictions**. `,
     link: 'https://github.com/AymericBasset/Acute_Kidney_Injury_Prediction_In_ICU',
+    linkTitle: `Project page`,
   },
   {
     title: 'Acute Kidney Injury Prediction',
@@ -46,5 +49,6 @@ The dataset used was based on the *MIMIC* database and composed of 20742 adult p
 Our best model is based on *XGBoost* and has an auroc score of **86.5%** 24 hours before the event.
 A second objective was model explainability and **real-time analysis of the predictions**. `,
     link: 'https://github.com/AymericBasset/Acute_Kidney_Injury_Prediction_In_ICU',
+    linkTitle: `Project page`,
   },
 ]
