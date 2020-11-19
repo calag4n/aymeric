@@ -1,32 +1,45 @@
 {
-  "name": "my-react-app",
-  "version": "0.1.0",
-  "private": true,
+  "name": "aymeric-basset-portfolio",
+  "description": "Portfolio de Aymeric Basset.",
+  "author": "Aymeric Basset <aymeric.basset@gmail.com>",
+  "contributors": [
+    "Aymeric Basset <aymeric.basset@gmail.com>",
+    "calag4n <console.logan@gmail.com"
+  ],
+  "version": "0.2.0",
+  "private": false,
+  "keywords": [
+    "portfolio"
+  ],
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
     "@material-ui/lab": "^4.0.0-alpha.56",
-    "@testing-library/jest-dom": "^5.11.5",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "lodash-es": "^4.17.15",
+    "better-docs": "^2.3.2",
+    "jsdoc": "^3.6.6",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-floaterjs": "^1.0.6",
-    "react-material-ui-carousel": "^2.1.1",
-    "react-native": "^0.63.3",
-    "react-native-web": "^0.14.7",
+    "react-helmet": "^6.1.0",
+    "react-markdown": "^5.0.2",
     "react-reveal": "^1.2.2",
     "react-scripts": "4.0.0",
     "react-spring": "^8.0.27",
     "react-vertical-timeline-component": "^3.3.1",
+    "styled-components": "^5.2.1",
     "web-vitals": "^0.2.4"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
+    "clean": "npm cache clean --force",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
+    "docs": "jsdoc -c jsdoc.conf.json"
   },
   "eslintConfig": {
     "extends": [
@@ -45,5 +58,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "bugs": "https://github.com/AymericBasset/portfolio_dev/issues",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AymericBasset/portfolio_dev"
   }
 }
