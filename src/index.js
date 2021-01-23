@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect, useState } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
 import styled from 'styled-components'
 import { ThemeProvider } from 'styled-components'
@@ -10,13 +10,11 @@ import Home from './components/Home'
 import ParallaxContainer from './components/parallax.js/Container'
 import ImagesLayer from './components/parallax.js/ImagesLayer'
 import { SizingsProvider } from './contexts/sectionsSizingContext'
-import useWindowSize from './hooks/useWindowSize'
 import { useSectionsSizing } from './contexts/sectionsSizingContext'
 import withLazyLoading from './HOC/withLazyLoading'
 
 import { GlobalStyle } from './styles/global'
 import { theme } from './styles/theme'
-import { log } from './utils/log'
 
 const LazySkills = React.lazy(() => import('./components/Skills'))
 const LazyAbout = React.lazy(() => import('./components/About'))
@@ -37,7 +35,6 @@ const Contact = withLazyLoading(LazyContact)
  */
 const App = () => {
   const {
-    sizes,
     sizes: {
       pagesValue,
       homeOffset,
@@ -47,7 +44,6 @@ const App = () => {
       projectsOffset,
       contactOffset,
     },
-    setSizes,
   } = useSectionsSizing()
 
   return (
